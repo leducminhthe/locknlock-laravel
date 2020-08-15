@@ -8,12 +8,12 @@
               
               @foreach($menus as $menucha)
               @if( count($menucha->cate2) > 0 )
-              <li><a href="">{{ $menucha->ten }}</a>
+              <li><a href="{{URL::to('category-1/'. $menucha->id)}}">{{ $menucha->ten }}</a>
                 <ul class="sub-menu">
                   <h4>{{ $menucha->ten }}</h4>
                     
                     @foreach($menucha->cate2 as $menucon)
-                      <li><a href="">{{ $menucon->ten_cate2 }}</a></li>
+                      <li><a href="{{URL::to('category-2/'. $menucon->id_cate2)}}">{{ $menucon->ten_cate2 }}</a></li>
                     @endforeach
                 </ul>
               </li>
@@ -87,7 +87,7 @@
           
           @foreach($sp_best as $key => $sp_best)
             <div class="item">
-                <a href="">
+                <a href="{{URL::to('details-sp/'. $sp_best->id_product)}}">
                   <figure>
                     <p class="mainProduct_listImg"><img src="{{$sp_best->photo}}" alt=""></p>
                     <figcaption>
@@ -132,7 +132,7 @@
                   
                   @foreach($binhnuoc as $key => $binhnuoc )
                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="{{URL::to('details-sp/'. $binhnuoc->id_product)}}">
                           <figure>
                             <p class="mainProduct_listImg"><img src="{{ $binhnuoc->photo }}" alt=""></p>
                             <figcaption>
@@ -170,7 +170,7 @@
 
                     @foreach($dungcunauan as $key => $dungcunauan )
                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="{{URL::to('details-sp/'. $dungcunauan->id_product)}}">
                           <figure>
                             <p class="mainProduct_listImg"><img src="{{ $dungcunauan->photo }}" alt=""></p>
                             <figcaption>
@@ -208,7 +208,7 @@
 
                     @foreach($hanggiadung as $key => $hanggiadung )
                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="{{URL::to('details-sp/'. $hanggiadung->id_product)}}">
                           <figure>
                             <p class="mainProduct_listImg"><img src="{{ $hanggiadung->photo }}" alt=""></p>
                             <figcaption>
@@ -246,7 +246,7 @@
 
                     @foreach($hopbaoquan as $key => $hopbaoquan )
                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="{{URL::to('details-sp/'. $hopbaoquan->id_product)}}">
                           <figure>
                             <p class="mainProduct_listImg"><img src="{{ $hopbaoquan->photo }}" alt=""></p>
                             <figcaption>
@@ -284,7 +284,7 @@
 
                     @foreach($binhgiunhiet as $key => $binhgiunhiet )
                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="{{URL::to('details-sp/'. $binhgiunhiet->id_product)}}">
                           <figure>
                             <p class="mainProduct_listImg"><img src="{{ $binhgiunhiet->photo }}" alt=""></p>
                             <figcaption>
@@ -322,7 +322,7 @@
 
                     @foreach($hopcom as $key => $hopcom )
                      <li class="col-4 col-md-4 col-lg-4">
-                        <a href="">
+                        <a href="{{URL::to('details-sp/'. $hopcom->id_product)}}">
                           <figure>
                             <p class="mainProduct_listImg"><img src="{{ $hopcom->photo }}" alt=""></p>
                             <figcaption>

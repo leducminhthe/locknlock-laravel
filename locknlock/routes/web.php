@@ -12,10 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@layout');
 
 //admin
 Route::get("/login", "AdminController@login");
@@ -47,7 +44,19 @@ Route::get('edit-product/{product_id}', 'ProductController@edit_product');
 Route::post('update-product/{product_id}', 'ProductController@update_product');
 //end admin
 
-Route::get('layout', 'HomeController@home');
+//LocknLock
+Route::get('locknlock', 'HomeController@home');
+Route::get('details-sp/{id_product}', 'HomeController@details');
+Route::get('category-1/{id}', 'HomeController@category_1');
+Route::get('category-2/{id_cate2}', 'HomeController@category_2');
 
+//shopping cart
+Route::post('shoppingcart', 'shoppingcartController@shoppingcart');
+Route::get('show-cart', 'shoppingcartController@show_cart');
+Route::get('delete-cart/{rowId}', 'shoppingcartController@delete_cart');
+Route::post('update-cart/{rowId}', 'shoppingcartController@update_cart');
+Route::get('delete-cart-all', 'shoppingcartController@delete_all');
 
-
+//checkout
+Route::get('checkout', 'shoppingcartController@checkout');
+Route::post('buy', 'shoppingcartController@buy');

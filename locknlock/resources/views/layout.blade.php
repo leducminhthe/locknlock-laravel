@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href='public/locknlock/css/owl.theme.default.min.css'>
     <link rel="stylesheet" type="text/css" href='public/locknlock/css/owl.carousel.min.css'>
     <link rel="stylesheet" type="text/css" href='public/locknlock/css/website_css.css'>
+    <link type="text/css" rel="stylesheet" href="public/locknlock/css/lightslider.css" />                  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Hello, world!</title>
@@ -67,21 +69,18 @@
           </ul>
 
           <h1 class="logo col-4 col-md-4 col-lg-4">
-            <a href="HomeController" >
+            <a href="{{URL::to('locknlock')}}" >
               <img src="http://www.locknlock.vn/data/base/banner/hd2_logo_4.gif">       
             </a>
          </h1>
 
           <ul class="cart_right col-4 col-md-4 col-lg-4">
             <li>
-              <a href="GioHangController" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng">
+              <a href="{{URL::to('show-cart')}}" ><img src="http://www.locknlock.vn/data/base/imgs/global/top_icon_cart.png" alt="Giỏ hàng">
               <?php
-                  if (isset($_SESSION['cart'])){
-                    $total = 0;
-                    foreach ($_SESSION['cart'] as $value) {
-                      $total += $value['SL'];
-                    }
-                    echo $total;
+                $cart = Cart::count();
+                  if (isset($cart)){
+                    echo $cart;
                   }else{
                     echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
                   }
@@ -110,8 +109,19 @@
                     </a>
                     <div class="dropdown-menu mega-area"  aria-labelledby="mega-one">
                       <div class="row">
-
-
+                      
+                      @foreach($menus as $menucha)
+                      @if( count($menucha->cate2) > 0 )
+                        <div class="col-sm-6 col-lg-3">
+                          <a href="{{URL::to('category-1/'. $menucha->id)}}" >
+                            <h5>{{ $menucha->ten }}</h5>
+                          </a>
+                            @foreach($menucha->cate2 as $menucon)
+                              <a class="dropdown-item" href="{{URL::to('category-2/'.$menucon->id_cate2)}}">{{ $menucon->ten_cate2 }}</a>
+                            @endforeach
+                        </div>
+                      @endif
+                      @endforeach
 
                       </div>
                     </div>
@@ -230,7 +240,7 @@
     }
   </script>
 
-<!--     <script src='public/locknlock/js/jquery.min.js'></script> -->
+    <script src="public/locknlock/js/lightslider.js"></script>
     <script src='public/locknlock/js/owl.carousel.min.js'></script>
     <script src='public/locknlock/js/website_js.js'></script>
 
