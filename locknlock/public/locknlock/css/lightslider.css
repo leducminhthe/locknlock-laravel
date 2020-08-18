@@ -200,6 +200,7 @@
 .lSSlideOuter.vertical .lightSlider > * {
     width: 100% !important;
     max-width: none !important;
+    margin-left: 80px;
 }
 
 /* vertical controlls */
