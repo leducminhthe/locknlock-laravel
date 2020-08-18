@@ -14,7 +14,7 @@
             }
          ?>
         @foreach($category_1 as $key => $cate_1)
-        <form action="{{URL::to('update-category-1/'.$cate_1->id )}}" method="post" class="form-horizontal">
+        <form action="{{URL::to('admin/category1/update-category-1/'.$cate_1->id )}}" method="post" class="form-horizontal">
             {{csrf_field()}}
             <div class="row form-group">
                 <div class="col col-md-3"><label for="hf-text" class=" form-control-label">Category</label></div>

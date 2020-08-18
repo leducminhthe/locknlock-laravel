@@ -28,7 +28,7 @@
 <p class="thuonghieu">LOCK&LOCK</p>
 <div class="fb-like" data-href="<?php echo $actual_link ?>" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
 
-@foreach($product as $product_detail)
+
 <div class="pageCommunity row">
   <div class="TenMaSP col-8 col-lg-8 col-md-8">
     <h3>{{ $product_detail->ten_product }}</h3>
@@ -59,7 +59,7 @@
     <ul id="vertical">
       @foreach($images as $product_image)
       <li data-thumb="{{ $product_image->photo }}">
-          <img src="{{ $product_image->photo }}" alt=""> 
+          <img style="width: 70%;" src="{{ $product_image->photo }}" alt=""> 
       </li>
       @endforeach
     </ul>
@@ -107,14 +107,30 @@
   {!! $product_detail->thongtinsanpham !!}  
 </div>
 
-@endforeach
+
 
 <div class="fb-comments" data-href="<?php echo $actual_link ?>" data-numposts="20" data-width=""></div> 
 
-<div class="danhsach row"></div>
-  <div id="xemthem">
-    
-  </div>
+<div class="danhsach row">
+  <ul class="row">
+        @foreach( $related_product as $sp)
+          <li class="col-4 col-md-4 col-lg-4">
+              <a href="{{URL::to('details-sp/'. $sp->id_product)}}">
+                <figure>
+                  <p class="mainProduct_listImg" ><img src="{{ $sp->photo }}" alt=""></p>
+                  <figcaption>
+                    <p class="mainProduct_listTit">{{ $sp->ten_product }}</p>
+                    <p class="mainProduct_listPrice">
+                      <span>{{ number_format($sp->gia,0) }}</span>₫</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+          @endforeach
+      </ul>
+      {{ $related_product->links() }}
+</div>
+
 
   <script >
   // const thumbs = document.querySelector(".thumb-img").children;
@@ -134,9 +150,9 @@
         slideMargin: 0,
         vertical:true,
         verticalHeight:400,
-        vThumbWidth:150,
+        vThumbWidth:100,
         thumbItem:4,
-        thumbMargin:10,
+        thumbMargin:0,
 
       });  
     });

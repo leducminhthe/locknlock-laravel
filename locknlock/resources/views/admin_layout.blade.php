@@ -37,6 +37,7 @@
     <!-- Right Panel -->
 
     @include('admin.blocks.footer')
+
 </body>
 
 </html>

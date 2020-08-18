@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 15, 2020 lúc 09:58 AM
+-- Thời gian đã tạo: Th8 18, 2020 lúc 09:29 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -259,7 +259,7 @@ CREATE TABLE `table_product` (
 --
 
 INSERT INTO `table_product` (`id_product`, `cat1_id`, `cat2_id`, `ten_product`, `tenkhongdau`, `gia`, `giatext`, `masp`, `hethang`, `photo`, `chitietsanpham`, `thongtinsanpham`, `SP_Best`, `online`, `ngaytao`) VALUES
-(1, 1, 1, 'Bộ 3 hộp thủy tinh L&L Euro (LLG214*2, LLG224*1)', 'bo-3-hop-thuy-tinh-ll-euro-llg2142-llg2241', 570000, '570,000₫', 'LLG224S3', 0, 'http://www.locknlock.vn/data/base/goods/small/201900833453671.jpg', NULL, NULL, 0, 1, 1595786213),
+(1, 1, 1, 'Bộ 3 hộp thủy tinh L&L Euro (LLG214*2, LLG224*1)', 'bo-3-hop-thuy-tinh-ll-euro-llg2142-llg2241', 570000, '570,000₫', 'LLG224S3', 0, 'http://www.locknlock.vn/data/base/goods/small/201900833453671.jpg', NULL, NULL, 0, 0, 1595786213),
 (2, 1, 1, 'HPL550- Hộp bảo quản gạo bằng nhựa Lock&Lock 12kg', 'hpl550-hop-bao-quan-gao-bang-nhua-locklock-12kg', 290000, '290,000₫', 'HPL550', 0, 'http://www.locknlock.vn/data/base/goods/small/201900832117140.jpg', '<p><img src=\"http://www.locknlock.vn/prod/spec_img/HPL550%2D%5Fdesign.jpg\" title=\"HPL550%2D%5Fdesign.jpg\"><br style=\"clear:both;\"> </p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Nơi Sản xuất</th>\r\n								<td>Trung Quốc<br>\n</td>\r\n							</tr>\n<tr>\n<th>Kích thước</th>\r\n								<td>370 x 215 x 290 (mm)</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP , PS</td>\r\n							</tr>\n<tr>\n<th>Màu sắc</th>\r\n								<td>Trắng</td>\r\n							</tr>\n</tbody>\n</table>', 0, 0, 1595786213),
 (3, 1, 1, 'Hộp nhựa L&L Twist Two way 360ml+310ml - Nắp màu đỏ', 'hop-nhua-ll-twist-two-way-360ml310ml-nap-mau-do', 85000, '85,000₫', 'LLS221R', 0, 'http://www.locknlock.vn/data/base/goods/small/201835450014217.jpg', '<<img src=\"http://www.locknlock.vn/prod/spec_img/LLS221R.jpg\" title=\"LLS221R.jpg\"><br style=\"clear:both;\"> ', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Nơi sản xuất</th>\r\n								<td>Việt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\n<tr>\n<th>Dung tích</th>\r\n								<td>360ml+310ml</td>\r\n							</tr>\n</tbody>\n</table>', 0, 0, 1595786213),
 (4, 1, 1, 'Bộ 6 hộp bảo quản Lock&Lock Classic (HPL806*2, HPL807*2, HPL816*1, HPL817*1)', 'bo-6-hop-bao-quan-locklock-classic-hpl8062-hpl8072-hpl8161-hpl8171', 380000, '380,000₫', 'HPL806S6', 0, 'http://www.locknlock.vn/data/base/goods/small/201834440539728.JPG', '<p><img src=\"http://www.locknlock.vn/prod/spec_img/3.JPG\" title=\"3.JPG\"><br style=\"clear:both;\"><img src=\"http://www.locknlock.vn/prod/spec_img/HPL806S6.JPG\" title=\"HPL806S6.JPG\"><br style=\"clear:both;\"><img src=\"http://www.locknlock.vn/prod/spec_img/HPL806S6%2DCover.JPG\" title=\"HPL806S6%2DCover.JPG\"><br style=\"clear:both;\"> </p>', '\r\n						<table class=\"detail_gosi\">\n<caption>Thông tin Sản phẩm </caption>\r\n						<colgroup>\n<col width=\"25%\">\n<col width=\"\">\n</colgroup>\n<tbody>\n<tr>\n<th>Thương hiệu</th>\r\n								<td>Lock&amp;Lock</td>\r\n							</tr>\n<tr>\n<th>Xuất xứ thương hiệu</th>\r\n								<td>Hàn Quốc</td>\r\n							</tr>\n<tr>\n<th>Sản xuất tại</th>\r\n								<td>Viêt Nam</td>\r\n							</tr>\n<tr>\n<th>Chất liệu</th>\r\n								<td>Nhựa PP</td>\r\n							</tr>\n</tbody>\n</table>', 2, 0, 1595786213),
@@ -1743,21 +1743,13 @@ INSERT INTO `table_product_image` (`id`, `product_id`, `photo`, `ngaytao`) VALUE
 --
 
 CREATE TABLE `tbl_admin` (
-  `admin_id` int(10) UNSIGNED NOT NULL,
-  `admin_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `admin_password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `admin_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `admin_phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `tbl_admin`
---
-
-INSERT INTO `tbl_admin` (`admin_id`, `admin_email`, `admin_password`, `admin_name`, `admin_phone`, `created_at`, `updated_at`) VALUES
-(1, 'admin@gmail', '827ccb0eea8a706c4c34a16891f84e7b', 'lethe', '12345', NULL, NULL);
+  `id` int(11) NOT NULL,
+  `admin_name` varchar(250) NOT NULL,
+  `admin_email` varchar(255) NOT NULL,
+  `admin_password` varchar(255) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `level` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -1794,12 +1786,21 @@ CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `phone` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `level` int(11) NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
+(2, 'minhthe', 'the@gmail', '12345', '$2y$10$znAw7lOadlK3Rti.Luk7C.UihxudtPYQOPa53RmEDclRtJHrZJ5sO', 1, NULL, '2020-08-16 23:34:14', '2020-08-16 23:34:14'),
+(4, 'minhthe', 'admin@gmail', '12345', '$2y$10$PqY1A0NhvgITVoMc8Ao0T.J1k6SsfmiBQmiI1gHp3J5Q12T23tYBa', 0, NULL, NULL, NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -1863,7 +1864,7 @@ ALTER TABLE `table_product_image`
 -- Chỉ mục cho bảng `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  ADD PRIMARY KEY (`admin_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `user`
@@ -1904,31 +1905,31 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `table_category_1`
 --
 ALTER TABLE `table_category_1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `table_category_2`
 --
 ALTER TABLE `table_category_2`
-  MODIFY `id_cate2` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id_cate2` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT cho bảng `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=418;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=419;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `admin_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

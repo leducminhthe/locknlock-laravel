@@ -7,7 +7,7 @@
     </div>
     <div class="card-body card-block">
         @foreach($product as $key => $sp)
-        <form action="{{URL::to('update-product/'.$sp->id_product)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+        <form action="{{URL::to('admin/product/update-product/'.$sp->id_product)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
             {{csrf_field()}}
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Static</label></div>

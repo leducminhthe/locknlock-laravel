@@ -28,10 +28,10 @@
                     <td>{{$cate_1->ten}}</td>
                     <td>
                         <button type="submit">
-                            <a href="{{URL::to('edit-category-1/'.$cate_1->id)}}" title="">Edit</a>
+                            <a href="{{URL::to('admin/category1/edit-category-1/'.$cate_1->id)}}" title="">Edit</a>
                         </button>
                         <button type="submit">
-                            <a onclick="return confirm('Are you sure?')" href="{{URL::to('delete-category-1/'.$cate_1->id)}}" title="">Delete</a>
+                            <a onclick="return confirm('Are you sure?')" href="{{URL::to('admin/category1/delete-category-1/'.$cate_1->id)}}" title="">Delete</a>
                         </button>
                     </td>
                 </tr>

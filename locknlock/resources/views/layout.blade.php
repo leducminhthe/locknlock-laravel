@@ -21,17 +21,13 @@
 
       <div class="header">
 
-        <?php 
-          if (isset($_SESSION['user'])) {
+        
+          @if( isset($customer) )
 
-            $email = $_SESSION['user']['Email'];
-            $name = $_SESSION['user']['Name'];
-
-            ?>
               <div class="btn-group account">
-                <marquee  scrollamount="10"><h3>chào mừng <?php echo $name;?> đến với chúng tôi</h3></marquee>
+                <marquee  scrollamount="10"><h3>chào mừng {{$customer->name}} đến với chúng tôi</h3></marquee>
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <?php echo $email;?>
+                  {{ $customer->email }}
                 </button>
                 <div class="dropdown-menu dropdown-menu-right option">
                   <button class="dropdown-item" type="button"><a href="LogoutController">Logout</a></button>
@@ -42,21 +38,16 @@
                 </div>
               </div>
 
-             
-            <?php
-          }else{
-            ?>
+          @else
               <div class="member row justify-content-end">
                 <ul class="col-12 col-md-12 col-lg-12">
-                  <li><a href="LoginController" >Đăng nhập</a></li>
+                  <li><a href="{{URL::to('login-user')}}" >Đăng nhập</a></li>
                   <li><a href="RegisterController" >Gia nhập thảnh viên</a></li>
                   <li><a href="" >My Page</a></li>
                   <li><a href="LienHeController" >Chăm sóc khánh hàng</a></li>                  
                 </ul>
               </div>
-            <?php
-          } 
-        ?>
+          @endif
 
         <div class="login row">
           <ul class="cart_left col-4 col-md-4 col-lg-4">
@@ -137,7 +128,8 @@
                 </li>
                 
               </ul>
-             <form class="form-inline my-2 my-lg-0" action="SearchController" method="get">
+             <form class="form-inline my-2 my-lg-0" action="{{URL::to('search')}}" method="post">
+              {{csrf_field()}}
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                 <button class="btn btn-secondary my-2 my-sm-0" name="submit" type="submit">
                   <img src="public/locknlock/images/search.png" >

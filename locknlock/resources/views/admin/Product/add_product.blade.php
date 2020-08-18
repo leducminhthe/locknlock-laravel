@@ -6,7 +6,7 @@
         <strong>Basic Form</strong> Elements
     </div>
     <div class="card-body card-block">
-        <form action="{{URL::to('save-product')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+        <form action="{{URL::to('admin/product/save-product')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
             {{csrf_field()}}
             <div class="row form-group">
                 <div class="col col-md-3"><label class=" form-control-label">Static</label></div>
@@ -25,7 +25,7 @@
             <div class="row form-group">
                 <div class="col col-md-3"><label for="select" class=" form-control-label">Cate1</label></div>
                 <div class="col-12 col-md-9">
-                    <select name="cat1" id="select" class="form-control">
+                    <select name="cat1" id="select_cate1" class="form-control">
                         @foreach($cate1 as $cat1)
                         <option value="{{$cat1->id}}">{{$cat1->ten}}</option>
                         @endforeach
@@ -35,7 +35,7 @@
             <div class="row form-group">
                 <div class="col col-md-3"><label for="select" class=" form-control-label">Cate2</label></div>
                 <div class="col-12 col-md-9">
-                    <select name="cat2" id="select" class="form-control">
+                    <select name="cat2" id="select_cate2" class="form-control">
                         @foreach($cate2 as $cat2)
                         <option value="{{$cat2->id_cate2}}">{{$cat2->ten_cate2}}</option>
                         @endforeach
@@ -70,7 +70,12 @@
             </div>
             <div class="row form-group">
                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">photo</label></div>
-                <div class="col-12 col-md-9"><input type="text" id="text-input" name="photo" placeholder="link photo" class="form-control"></div>
+                <div class="col-12 col-md-9">
+                    <!-- chọn file ảnh -->
+                    <!-- <input type="file" id="text-input" name="photo" placeholder="link photo" class="form-control"> -->
+                    <!-- link ảnh -->
+                    <input type="text" id="text-input" name="photo" placeholder="link photo" class="form-control">
+                </div>
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary btn-sm">
@@ -84,4 +89,18 @@
     </div>
 </div>
 
-@stop
+<script>
+
+    $(document).ready(function(){
+        $("#select_cate1").change(function(){
+            var cat1_id = $(this).val();
+            $.get('admin/ajax/cat2/' + cat1_id, function(data){
+                $("#select_cate2").html(data);
+            })
+        });
+    });
+
+</script>
+
+@endsection
+

@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Session;
+use App\product;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Redirect;
+
 session_start();
 
 class ProductController extends Controller
@@ -29,9 +32,29 @@ class ProductController extends Controller
     	$data['cat2_id'] = $req->cat2;
     	$data['online'] = $req->online;
 
+        //upload file
+        // if ($req->hasFile('photo')) {
+        //     $file = $req->file('photo');
+
+        //     $duoi_file = $file->getClientOriginalExtension();
+        //     if ($duoi_file != 'jqg' && $duoi_file != 'png' && $duoi_file != 'jpeg') {
+        //         return Redirect::to('admin/product/list-product')->with('loi','image not right'); 
+        //     }
+
+        //     $name = $file->getClientOriginalName();
+        //     $hinh = Str::random(4).'_'.$name;
+        //     while (file_exists("upload".$hinh)) {
+        //         $hinh = Str::random(4)."_".$name;
+        //     }
+        //     $file->move('upload',$hinh);
+        //     $data['photo'] = $hinh;
+        // }else{
+        //     $data['photo'] = '';
+        // }
+
     	DB::table('table_product')->insert($data);
     	Session::put('message', 'Add product successs');
-    	return Redirect::to('list-product');
+    	return Redirect::to('admin/product/list-product');
     }
 
     public function list_product(){
@@ -64,6 +87,12 @@ class ProductController extends Controller
 
     	DB::table('table_product')->where('id_product', $product_id)->update($data);
     	Session::put('message', 'Update product successs');
-    	return Redirect::to('list-product');
+    	return Redirect::to('admin/product/list-product');
+    }
+
+    public function delete_product($product_id){
+        $delete = product::find($product_id);
+        $delete->delete();
+        return Redirect::to('admin/product/list-product');
     }
 }

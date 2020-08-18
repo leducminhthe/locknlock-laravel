@@ -44,10 +44,10 @@
                         @endif
                     <td>
                         <button type="submit">
-                            <a href="{{URL::to('edit-product/'.$sp->id_product)}}" title="">Edit</a>
+                            <a href="{{URL::to('admin/product/edit-product/'.$sp->id_product)}}" title="">Edit</a>
                         </button>
                         <button type="submit">
-                            <a onclick="return confirm('Are you sure?')" href="{{URL::to('delete-product/'.$sp->id_product)}}" title="">Delete</a>
+                            <a onclick="return confirm('Are you sure?')" href="{{URL::to('admin/product/delete-product/'.$sp->id_product)}}" title="">Delete</a>
                         </button>
                     </td>
                 </tr>

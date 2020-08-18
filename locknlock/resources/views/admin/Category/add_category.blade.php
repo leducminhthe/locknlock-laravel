@@ -6,7 +6,7 @@
         <strong>Horizontal</strong> Form
     </div>
     <div class="card-body card-block">
-        <form action="{{URL::to('save-category-1')}}" method="post" class="form-horizontal">
+        <form action="{{URL::to('admin/category1/save-category-1')}}" method="post" class="form-horizontal">
             {{csrf_field()}}
             <div class="row form-group">
                 <div class="col col-md-3"><label for="hf-text" class=" form-control-label">Category</label></div>

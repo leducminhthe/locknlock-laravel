@@ -16,24 +16,32 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th width="20%">#</th>
+                    <th width="5%">#</th>
                     <th width="30%">Name</th>
-                    <th width="30%">cate1_Name</th>
-                    <th width="20%"></th>
+                    <th width="25%">Email</th>
+                    <th width="20%">Phone</th>
+                    <th width="5%">Level</th>
+                    <th width="15%"></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($category_2 as $key => $cate_2)
+                @foreach($users as $key => $user)
                 <tr>
-                    <th scope="row">{{$cate_2->id_cate2}}</th>
-                    <td>{{$cate_2->ten_cate2}}</td>
-                    <td>{{$cate_2->ten}}</td>
+                    <th scope="row">{{$user->id}}</th>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->phone}}</td>
+                    @if( $user->level == 1)
+                        <td>admin</td>
+                    @else
+                        <td>user</td>
+                    @endif
                     <td>
                         <button type="submit">
-                            <a href="{{URL::to('admin/category2/edit-category-2/'.$cate_2->id_cate2)}}" title="">Edit</a>
+                            <a href="{{URL::to('admin/users/edit-users/'.$user->id)}}" title="">Edit</a>
                         </button>
                         <button type="submit">
-                            <a onclick="return confirm('Are you sure?')" href="{{URL::to('admin/category2/delete-category-2/'.$cate_2->id_cate2)}}" title="">Delete</a>
+                            <a onclick="return confirm('Are you sure?')" href="{{URL::to('admin/users/delete-users/'.$user->id)}}" title="">Delete</a>
                         </button>
                     </td>
                 </tr>
@@ -41,7 +49,6 @@
             </tbody>
         </table>
     </div>
-    {{ $category_2->links()}}
 </div>
 
 @stop

@@ -21,14 +21,11 @@
 
 </ul>
 
-  @foreach($category_2 as $cate2)
-  @if( count($cate2->product) > 0 )
 		<div class="danhmuc_detail">
-			<h4>{{ $cate2->ten_cate2 }}</h4>
+			<h4>{{ $category_2->ten_cate2 }}</h4>
 		</div>
-
       <ul class="row">
-        @foreach( $cate2->product as $sp)
+        @foreach( $product as $sp)
           <li class="col-4 col-md-4 col-lg-4">
               <a href="{{URL::to('details-sp/'. $sp->id_product)}}">
                 <figure>
@@ -43,13 +40,6 @@
             </li>
           @endforeach
       </ul>
-
-  @endif
-  @endforeach
-
-<div class="danhsach row"></div>
-  <div id="xemthem">
-    
-  </div>
+  {{ $product->links() }}
 
 @stop

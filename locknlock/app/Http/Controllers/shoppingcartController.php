@@ -12,6 +12,11 @@ session_start();
 
 class shoppingcartController extends Controller
 {
+    function __construct(){
+        $menus = category_1::all();
+        view()->share('menus', $menus);
+    }
+
     public function shoppingcart(Request $req){
 
         Cart::add([
@@ -27,8 +32,7 @@ class shoppingcartController extends Controller
     }
 
     public function show_cart(){
-    	$menus = category_1::all();
-    	return view('locknlock.shoppingcart')->with(compact('menus'));
+    	return view('locknlock.shoppingcart');
     }
 
     public function delete_cart($rowId){
@@ -48,8 +52,7 @@ class shoppingcartController extends Controller
     }
 
     public function checkout(){
-        $menus = category_1::all();
-        return view('locknlock.checkout')->with(compact('menus'));
+        return view('locknlock.checkout');
     }
 
     public function buy(Request $req){
@@ -71,7 +74,6 @@ class shoppingcartController extends Controller
             DB::table('donhang')->insert($data);
         }
 
-        $menus = category_1::all();
         Session::put('message','buy success');
         return Redirect::to('delete-cart-all');
     }
