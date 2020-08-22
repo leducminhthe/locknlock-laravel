@@ -3,7 +3,7 @@
 
 <nav class="nav nav_GioHang">
   <a class="nav-link" href=""><img src="public/locknlock/images/home.png" alt=""></a>
-  <a class="nav-link" href="#">Kết quả kiểm tra</a>
+  <a class="nav-link" href="#">Kết quả kiểm tra {{$search}}</a>
 </nav>
 
 	@foreach($products as $product)

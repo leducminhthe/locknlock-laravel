@@ -83,7 +83,7 @@ class HomeController extends Controller
     public function search_post(Request $req){
         $search = $req->search;
         $products = product::where('ten_product','like','%'.$search.'%')
-        ->orWhere('masp','like','%'.$search.'%')->paginate(5);
+        ->orWhere('masp','like','%'.$search.'%')->take(10)->paginate(5);
         return view('locknlock.search')->with(compact('products','search'));
     }
 }
