@@ -1,0 +1,158 @@
+$bg-color : #E5E5E5;
+$white : white;
+$black : black;
+$blue : #00bfff;
+
+.heading-box{
+
+	background-color: $bg-color;
+}
+
+.page-heading{
+	
+	text-align: center;
+	
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.tab{
+
+	width: 100%;
+    font-size: 18px;
+    color: rgb(0, 66, 141);;
+    background-color: white;
+    height: 50px;
+    line-height: 50px;
+
+    &.active {
+    	background-color: rgb(0, 66, 141);;
+    	color: white;
+	}
+
+	&:hover{
+		color: $blue;
+	}
+}
+
+.d-block{
+	display: block !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+
+.text-slogan {
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: bold;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.article{
+	display: block !important;
+}
+
+.my-3 {
+    margin-bottom: 1rem !important;
+}
+
+.container {
+    padding: 0 22px;
+}
+
+
+.container-middle {
+	width: 100%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-right: auto;
+	margin-left: auto;
+	box-sizing: border-box;
+}
+
+.d-md-block {
+	display: block !important;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+	.container {
+	    max-width: 1200px;
+	    margin: 0 auto;
+	    padding: 0 15px;
+	}
+
+	.tab {
+   		width: calc((100% - 24px) / 3);
+	}
+
+	.page-heading {
+	    font-size: 48px;
+	    line-height: 67px;
+	}
+
+	.mb-md-0, .my-md-0 {
+    margin-bottom: 0 !important;
+	}
+
+	.text-slogan {
+	    font-size: 48px;
+	    line-height: 67px;
+	    font-weight: bold;
+	}
+
+	.d-md-none {
+    	display: none !important;
+    }
+
+    
+}
+
+@media screen and (min-width: 768px){
+	
+	.container {
+	    max-width: 1200px;
+	    margin: 0 auto;
+	    padding: 0 15px;
+	}
+
+	.tab {
+   		width: calc((100% - 24px) / 3);
+	}
+
+	.page-heading {
+	    font-size: 48px;
+	    line-height: 67px;
+	}
+
+	.text-slogan {
+	    font-size: 48px;
+	    line-height: 67px;
+	    font-weight: bold;
+	}
+
+	.d-md-none {
+    	display: none !important;
+    }
+}
+
+
+.active:after {
+	content: '';
+}

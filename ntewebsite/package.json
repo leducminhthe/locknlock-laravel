@@ -1,0 +1,37 @@
+{
+  "name": "gulp-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp serve",
+    "build": "gulp"
+  },
+  "author": "Minh Le",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "bootstrap": "^4.4.1",
+    "browser-sync": "^2.23.6",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.3.1",
+    "merge-stream": "^1.0.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "jquery.redirect": "^1.1.4"
+  }
+}

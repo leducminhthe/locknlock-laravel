@@ -1,0 +1,65 @@
+live:ed71336ef3744e34
+
+theldm@ntlogistics.vn/The@123 (theldm@ntlogistics.vn/The@123)
+http://mail.ntlogistics.vn/
+ntlogistics-it.slack.com
+
+// domen gia 
+
+vao D:\New folder\apache\conf\extra\httpd-vhosts.conf them 
+
+//ntlogistics.me: ten dat
+
+<VirtualHost ntlogistics.me:80>
+    DocumentRoot "F:/ProjectNTL/ntl-web/public" //F:/ProjectNTL/ntl-web/public duong dan file den laravel
+  ServerName ntlogistics.me
+  ServerAlias www.ntlogistics.me
+  <Directory "F:/ProjectNTL/ntl-web/">
+    AllowOverride All
+    Require all Granted
+  </Directory>
+</VirtualHost>
+
+vao C:\Windows\System32\drivers\etc\hots them
+
+127.0.0.1 		vieclam.me // ten dat
+
+// viet sass
+cai npm install
+cai npm run dev
+cai npm run watch
+resources\sass\app.scss
+
+// minify 
+ben layout su dung: mix
+href="{{mix('/css/app.css')}}
+
+them .version()
+mix.js('resources/js/app.js', 'public/js').version()
+    .sass('resources/sass/app.scss', 'public/css').version();
+
+//fix “ReferenceError: primordials is not defined” error.
+create a npm-shrinkwrap.json cùng file package.json
+them {
+      "dependencies": {
+        "graceful-fs": {
+            "version": "4.2.2"
+         }
+      }
+    }
+dung npm install sau dung gulp
+
+Env file:
+
+APP_URL=http://localhost:8000
+FACEBOOK_LOGIN_URL=/en/portal/facebook_login
+FACEBOOK_CALLBACK_URL=/en/portal/facebook_callback
+in Laravel:
+
+env('APP_URL') . env('FACEBOOK_LOGIN_URL');
+
+//cac buoc
+process steps css
+
+//ismobile
+composer dump-autoload

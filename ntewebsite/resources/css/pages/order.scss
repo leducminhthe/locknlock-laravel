@@ -1,0 +1,1176 @@
+$primary_color: #00428D;
+$green: #758E3D;
+$white: white;
+$yellow: yellow;
+$text: #F6F6F7; 
+$black: rgba(0,0,0,0.8);
+$css_step: #7d7d7d;
+$den_nhat: rgba(0,0,0,0.2);
+$color_li:#959595;
+$color_li_KV: #EBEBEB;
+
+.order-left{
+	.title{
+		font-weight: normal;
+	    font-size: 18px;
+	    color: #222222;
+	}
+	.button_next_mobile{
+		display: none;
+	}
+	background: $white;
+	::placeholder {
+  		color: $color_li;
+	}
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 4px 16px $den_nhat;
+    input, textarea{
+    	color: $black !important;
+    }
+	h1{
+		font-size: 48px;
+    	font-weight: bold;
+    	margin-bottom: 20px;
+	}
+
+	.error{
+		color: red;
+		font-style: italic;
+    	font-size: 14px;
+    	margin-bottom: 0px;
+	}
+
+	/*money*/
+	#form{
+		input{
+		    padding: 0;
+		    border: 1px solid #C4C4C4;
+		    width: 100%;
+		    border-right: 0px;
+		    padding-right: 15px;
+		    border-radius: 7px 0px 0px 7px;
+		    background: $text;
+			text-align: right;
+			box-shadow: none;
+		}
+		.flex {
+		    display: flex;
+			.currency {
+			    border: 1px solid #C4C4C4;
+			    border-radius: 0 7px 7px 0;
+			    border-left: 0;
+			    line-height: 42px;
+			    background: $text;
+			    span{
+			    	border-left: 1px solid $black;
+			    	padding: 0px 10px;
+			    }
+			}
+		}
+	}
+	/*endmoney*/
+
+	.steps{
+		border-bottom: 1px solid $black;
+		height: 60px;
+	}
+	.progressbar {
+    	counter-reset: step;
+	}
+	.progressbar li {
+		list-style-type: none;
+		width: 25%;
+		float: left;
+		font-size: 12px;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		color: $css_step;
+	}
+	.progressbar li:before {
+		width: 30px;
+		height: 30px;
+		content: counter(step);
+		counter-increment: step;
+		border: 2px solid $css_step;
+		display: block;
+		text-align: center;
+		margin: 0 auto 10px auto;
+		border:none;
+		background-color: white;
+		font-size: 24px;
+    	line-height: 30px;
+	}
+	.progressbar li:after {
+		width: 84%;
+		height: 2px;
+		content: '';
+		position: absolute;
+		background-color: $css_step;
+		top: 15px;
+		left: -42%;
+	}
+	.progressbar li:first-child:after {
+	    content: none;
+	}
+	.progressbar li.active {
+	    color: $primary_color;
+	}
+	.progressbar li.active:before {
+	    border-color: $primary_color;
+	    background: $primary_color;
+	    border-radius: 50%;
+    	color: $yellow;
+    	font-size: 24px;
+    	line-height: 30px;
+	}
+  	.progressbar li.active + li:after {
+    	background-color: $primary_color;
+  	}
+	
+	.choose{
+		border:1px solid #C8C8C8;
+		color: #8E8E8E;
+		border-radius: 5px;
+		text-align: center;
+		margin: 5px 0px;
+		filter: grayscale(100%);
+		height: 73px;
+    	padding-top: 12px;
+    	cursor: pointer;
+
+		&:hover{
+			background: #2366B1 !important;
+			color: $white !important;
+			filter: unset !important;
+		};
+
+		span{
+			padding: 0px 10px;
+		}
+	}
+
+	.KL{
+		li{
+			height: 29px;
+    		line-height: 45px;
+			float: left;
+			width: 80px;
+			text-align: center;
+		    margin: 0px 5px;
+		    padding: 0px 5px;
+		    border-radius: 5px;
+		    background: $color_li_KV;
+		    cursor: pointer;
+		    color: $color_li;
+		    height: 45px;
+
+		    &:first-child{
+		    	margin-left:0px;
+		    }
+
+		    &:hover{
+		    	background: $primary_color !important;
+		    	color: $white !important;
+		    };
+
+		    p{
+		    	margin: 0px;
+		    }
+		}
+	}
+	.input_KL{
+		input{
+			border: 1px solid #C4C4C4;
+		    border-radius: 7px;
+		    background: #F6F6F7;
+		    height: 45px;
+		    padding-left: 5px;
+			outline: 0;
+			width: 170px;
+		}
+		::placeholder {
+  				color: #C4C4C4;
+			}
+	}
+	.mycheckbox{
+		input, label{
+			cursor: pointer;
+		    color: black;
+		    font-size: 16px;
+		    line-height: 19px;
+		    font-weight: normal;
+		}
+	}
+	.chon_HH{
+		color:$color_li;
+		&:hover{
+	    	background: $primary_color !important;
+	    	color: $white !important;
+		};
+	}
+	.chon_HH_Khac{
+		@extend .chon_HH
+	}
+	.tienthu{
+		.form_amount{
+			margin-top: 3px;
+    		float: right;
+			width: 217px;
+			::placeholder {
+  				color: #C4C4C4;
+  				font-weight: normal;
+			}
+		}
+		p{
+			margin-bottom: 10px;
+			text-align: end;
+		}
+		input{
+			height: 45px;
+		}
+	}
+	.phone{
+		background: #F6F6F7;
+		height: 49px;
+	}
+	#chon_ten_tinh{
+		span{
+			color: #999;
+		    cursor: pointer;
+		    font-weight: bold;
+		    margin: 5px;
+		}
+	}
+	.chon_KV{
+		width: 100%;
+		border: 1px solid #C4C4C4;
+		opacity: 0.7;
+		background: $text;
+		border-radius: 5px;
+		min-height: 49px;
+
+		ul{
+			margin-top: 3px;
+			li{
+				float: left;
+				min-width: 105px;
+				padding: 0px 8px;
+				text-align: center;
+			    background: $primary_color;
+			    border-radius: 5px;
+			    margin: 5px 8px;
+			    color: $white;
+			    height: 29px;
+    			line-height: 29px;
+			}
+		}
+	}
+	.chon_KV{
+		ul{
+			p{
+				float: left;
+			}
+		}
+		.delete{
+			padding-top: 5px;
+    		padding-right: 3px;
+    		float: right;
+		    span{
+		    	color: $primary_color;
+    			cursor: pointer;
+		    }
+		    .icon_recycle{
+		    	display: none;
+		    }
+		}
+	}
+	.loaiHH{
+		ul{
+			li{
+				font-size: 16px;
+				height: 29px;
+    			line-height: 29px;
+				float: left;
+			    margin-right: 10px;
+			    min-width: 94px;
+			    padding: 0px 7px;
+			    text-align: center;	
+			    border-radius: 5px;
+			    background: $color_li_KV;
+			    cursor: pointer;
+			    p{
+			    	margin:0px;
+			    }	
+			}
+		}
+		ul:after {
+	        content: ".";
+	        display: block;
+	        height: 0;
+	        clear: both;
+	        visibility: hidden;
+	    }
+	}
+	.HH_khac{
+
+		input{
+			background: #F6F6F7;
+		    height: 49px;
+		}
+	}
+	.Khu-vuc{
+		.TP{
+			.related{
+				float: right !important;
+				list-style: none;
+			}
+		}
+		.KV, .ten-KV{
+			ul{
+				li{
+					float: left;
+				    margin-right: 10px;
+				    background: $color_li_KV;
+				    border-radius: 5px;
+				    min-width: 100px;
+				    padding: 0px 5px;
+				    text-align: center;
+				    margin-bottom: 10px;
+				    cursor: pointer;
+				    color: $color_li;
+				    font-size: 16px;
+				    &:hover{
+				    	background: $primary_color;
+				    	color: $white;
+				    	transition: 0.5s;
+				    }
+				}
+			}
+		}
+		.KVK{
+			ul{
+				li{
+					float: left;
+				    margin-right: 15px;
+				    width: 20px;
+				    cursor: pointer;
+				    padding: 0px 10px;
+				    color: $color_li;
+				    &:hover{
+				    	color: $primary_color !important;
+				    	font-weight: bold !important;
+				    }
+				}
+			}
+			h4 {
+			   width: 100%; 
+			   text-align: left; 
+			   border-bottom: 1px solid #000; 
+			   line-height: 0.1em;
+			   margin: 10px 0 20px; 
+			} 
+
+			h4 span { 
+			    background:#fff; 
+			    padding:0 20px;
+			    padding-left: 0px; 
+			}
+		}
+	}
+	.note{
+		input{
+			background: $text;
+			height: 49px;
+		}
+	}
+	.next{
+		border: 1px solid $white;
+		float: right;
+    	font-size: 25px;
+    	button{
+    		border: none;
+    		background: $white;
+    		cursor: pointer;
+    		font-weight: normal;
+			font-size: 24px;
+			line-height: 29px;
+    		&:hover{
+				color: $primary_color !important;
+    		};
+    	}
+    	a:hover{
+    		color: $primary_color;
+    	}
+    	.back_step{
+			color: $color_li;
+			font-weight: normal;
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+	.xemay{
+		background: $primary_color;
+	    color: white;
+	    border-radius: 5px;
+	    padding: 20px 0px;
+	    .tieptuc{
+	    	font-size: 13px;
+		    background: #fff;
+		    border-radius: 5px;
+		    height: 30px;
+		    line-height: 25px;
+		    text-align: center;
+		    width: 97px;
+		    border: none;
+		    color: #00428D;
+		    cursor: pointer;
+	    }
+	    .anh_vandon{
+	    	align-items: center;
+    		display: flex;
+    		padding: 0px;
+	    }
+	    p{
+	    	font-size: 13px;
+	    }
+	}
+	.oto{
+		background: #0280C7;
+		@extend .xemay
+	}
+}
+.order-right{
+	.thongtin{
+		font-size: 13px;
+		padding: 0px;
+		background: $white;
+    	box-shadow: 5px 4px 16px $den_nhat;
+	    border-radius: 10px;
+
+	    .noigui{
+	    	padding:9px;
+	    	border-bottom: 1px solid rgba(193, 200, 217, 0.7);
+	    	h1{
+	    		font-weight: 600;
+	    		font-size: 24px;
+	    		padding-top: 5px;
+	    	}
+	    	h3{
+	    		color: #979797;
+	    	}
+	    	.phone, .local, .time_delivery{
+	    		color: #B8B8B8;
+	    		display: flex;
+	    		margin-bottom: 7px;
+		    	img{
+		    		width: 20px;
+		    		height: 20px;
+		    	}
+		    	.ml-1{
+		    		padding-top: 3px;
+		    	}
+		    }
+	    }
+	    .noinhan{
+	    	padding:9px;
+	    	h3{
+	    		color: #979797;
+	    	}
+	    	.phone, .local, .time_delivery{
+	    		color: #B8B8B8;
+	    		display: flex;
+	    		margin-bottom: 7px;
+		    	img{
+		    		width: 20px;
+		    		height: 20px;
+		    	}
+		    }
+		    .ml-1{
+		    	padding-top: 3px;
+		    }
+	    }
+	}
+	.donhang{
+		background: $white;
+    	padding: 10px;
+    	border-radius: 10px;
+    	box-shadow: 5px 4px 16px $den_nhat;
+    	table{
+    		tbody{
+				.cargo{
+					max-width: 100px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+    			td{
+    				font-size: 13px;
+    				color: black;
+    				span{
+    					margin: 0px;
+    				}
+    			}
+    			td:last-child{
+					text-align: right;
+    			}
+    		}
+    	}
+    	.qr_code{
+    		display: flex;
+    		align-items: center;
+    	}
+    	span{
+    		display: block;
+    		margin: auto;
+    		margin: 0px 5px;
+    	}
+    }
+    .back_finish{
+		margin: 10px 0px;
+		.back_button{
+			button{
+				cursor: pointer;
+				border: none;
+				border-radius: 5px;
+				background: #8792B1;
+				height: 45px;
+				span{
+					color: $white;
+					line-height: 25px;
+				}
+			}
+		}
+		.finish_button{
+			button{
+				border: none;
+				border-radius: 5px;
+				background: $primary_color;
+				height: 45px;
+				cursor: pointer;
+				img{
+					padding-bottom: 3px;
+				}
+				a{
+					color: $white;
+					span{
+						line-height: 25px;
+					}
+				}
+			}	
+		}
+	}
+    .dichvu_thanhtoan{
+    	background: $white;
+    	font-size: 14px;
+    	ul{
+    		li{
+    			span{
+    				font-size: 24px;
+    			}
+    		}
+    	}
+    }
+    .note_taodon{
+    	background: white;
+    	border-radius: 10px;
+    	.note{
+    		textarea{
+	    		width: 100%;
+				height: 131px;
+				background: #F6F6F7;
+				border: 1px solid #C4C4C4;
+				border-radius: 4px;
+				color: black !important;
+				height: 163px;
+				padding: 5px;
+	    	}
+    	}
+    }
+}
+.thanh_toan_B4{
+	h3{
+		font-weight: normal;
+    	font-size: 18px;
+    	color: #222222;
+	}
+	.nguoigui_thanhtoan, .nguoinhan_thanhtoan {
+		div {
+			display: inline-block;
+		}
+		input[type="radio"] {
+		    display: none;
+
+		    + label {
+		    	font-weight: normal;
+				font-size: 14px;
+				line-height: 17px;
+				color: #757575;
+				cursor: pointer;
+		    	span {
+			        display: inline-block;
+			        width: 21px;
+			        height: 21px;
+			        margin: -1px 4px 0 0;
+			        vertical-align: middle;
+			        cursor: pointer;
+			        border-radius: 50%;
+			        text-align: center;
+			        line-height: 17px;
+			        border: 1px solid #00428D;
+	        		img {
+	          			opacity: 0;
+	          			transition: all .3s ease;
+	          			width: 15px;
+	        		}
+		      	}
+		    }
+		    &:checked + label span {
+		    	background: $primary_color;
+		    	img {
+		    		opacity: 1;
+		    	}
+		    }
+		}
+	}
+}
+.section-thank-you{
+	.tk{
+		font-size: 24px !important;
+    	color: $primary_color !important;
+    	font-weight: 800;
+	}
+	.text-blue{
+		color: $primary_color;
+		font-weight: bold;
+	}
+	.img_account{
+
+	}
+	h1{
+		color: $primary_color;
+		font-size: 24px;
+	}
+	#send{
+		cursor: pointer;
+		&:hover{
+			color:$primary_color;
+		};
+	}
+	.button_login{
+		button{
+			width: 190px;
+			border: none;
+		    height: 38px;
+		    background: #00428D;
+		    border-radius: 4px;
+		    a{
+		    	color: white;
+		    }
+		}	
+	}
+}
+.khuyenmai{
+	.currency{
+		border: 2px solid $primary_color;
+		border-right: 0px !important;
+		border-radius: 5px 0px 0px 5px;
+		padding: 0px 5px;
+		display: flex;
+		align-items: center;
+		span{
+			font-size: 25px
+		}
+	}
+    input{
+    	padding-right: 0px !important;
+    	background-image: none !important;
+    	box-shadow: unset !important;
+    	padding-left: 5px;
+    	padding-right: 5px;
+    	height: 39px;
+    	background: white;
+    	border: 2px solid $primary_color !important;
+		border-radius: 0px 5px 5px 0px;
+		border-left: 0px !important;
+		color: $black !important;
+		font-size: 14px;
+		&:focus{
+			border: 2px solid $primary_color;
+		};
+		.was-validated{
+			border-color: $primary_color !important;
+		}
+    }
+    .apdung{
+    	padding-left: 5px;
+    	button{
+    		height: 39px;
+    		cursor: pointer;
+	    	border-radius: 5px;
+		    background: #00428D;
+		    color: white;
+		    width: 100%;
+		    border: 1px solid #00428D;
+    	}
+    }
+}
+.ma_khuyenmai{
+	border-bottom: 1px solid rgba(193, 200, 217, 0.5);
+	padding-bottom: 17px;
+	@extend .khuyenmai
+}
+
+.dichvu_thanhtoan{
+	box-shadow: 5px 4px 16px $den_nhat;
+	margin-top: 10px;
+	border-radius: 10px;
+	padding: 10px 0px;
+	.QR{
+		border-right: 1px solid rgba(193, 200, 217, 0.8);
+		text-align: center; 
+		img{
+			height: 83px;
+			width: 83px;
+		}
+		span{
+			color: $primary_color;
+			font-size: 13px;
+		}
+		.icon-Dot{
+			font-size: 75px;
+		}
+	}
+	.thanhtoan{
+		font-size: 13px;
+		color: #8E8E8E;
+		span{
+			margin-right: 5px;
+    		font-weight: bold;
+    		color: $black;
+		}
+	}
+}
+.thoigian{
+	label{
+		padding-top: 10px;
+	}
+	select{
+		border: 1px solid #C4C4C4;
+		background: $text;
+    	border-radius: 5px;
+    	float: right;
+	}
+}
+.account_TK{
+	box-shadow: 5px 4px 16px $den_nhat;
+	h1{
+		text-align: center;
+    	font-size: 1.5rem;
+    	color: $primary_color;
+	}
+	span{
+		color: $primary_color;
+		font-weight: bold;
+	}
+	p{
+		text-align: center;
+	}
+	.img_TK{
+		padding: 0px 80px;
+	}
+	.change_pass{
+		a{
+			background: $primary_color;
+		    padding: 10px 30px;
+		    border-radius: 5px;
+		    color: $white;
+		    &:hover{
+				color: yellow !important;
+			}
+		}
+	}
+}
+
+/*thanh toán*/
+.thanh_toan_van_don{
+	.container{
+		width: 800px; 
+		background: white;
+		box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+		border-radius: 7px;
+		.check{
+			.nguoidung_thanhtoan{
+				border-bottom: 1px solid #C4C4C4;
+				.nguoigui_thanhtoan, .nguoinhan_thanhtoan {
+					div {
+						display: inline-block;
+					}
+					input[type="radio"] {
+					    display: none;
+
+					    + label {
+					    	font-weight: normal;
+							font-size: 18px;
+							line-height: 21px;
+							color: #222222;
+					    	span {
+						        display: inline-block;
+						        width: 30px;
+						        height: 30px;
+						        margin: -1px 4px 0 0;
+						        vertical-align: middle;
+						        cursor: pointer;
+						        border-radius: 50%;
+						        text-align: center;
+						        line-height: 25px;
+						        border: 1px solid #00428D;
+				        		img {
+				          			opacity: 0;
+				          			transition: all .3s ease;
+				        		}
+					      	}
+					    }
+					    &:checked + label span {
+					    	background: $primary_color;
+					    	img {
+					    		opacity: 1;
+					    	}
+					    }
+					}
+				}
+			}
+		}
+		.title{
+			h1{
+				font-weight: bold;
+			    font-size: 48px;
+			    line-height: 57px;
+			    color: #222222;
+			    padding: 25px;
+			}
+		}
+		.hinhthuc_thanhtoan{
+			#accordion{
+				.card{
+					.card-header{
+						padding: 15px;
+						.btn-link{
+							font-weight: normal;
+						    font-size: 24px;
+						    line-height: 29px;
+						    color: #979797;
+						    padding-right: 0px;
+						}
+					}
+					#collapseOne{
+						.card-body{
+							.all{
+								background: #F2F2F2;
+								border-radius: 7px;
+								.chuyenkhoan{
+									height: 63px;
+								    background: #0280C7;
+								    border-radius: 7px;
+								    font-size: 24px;
+									line-height: 29px;
+									display: flex;
+									align-items: center;
+									color: #FFFFFF;
+									span{
+										padding-left: 20px;
+									}
+								}
+								.hinh_thuc{
+									.img_nganhang{
+										img{
+											padding-right: 17px;
+											padding-left: 17px; 
+    										width: 100%;
+    									}
+									}
+									.chon_nganhang{
+										display: flex;
+									    padding: 0px 17px;
+									    margin: 10px 0px;
+									    img{
+									    	width: 31px;
+	    									height: 31px;
+									    }
+									    input{
+									    	height: 38px;
+											background: #FFFFFF;
+											border: 1px solid #CCCCCC;
+											border-radius: 4px;
+											margin-left:15px;
+									    }
+									}
+									.account{
+										@extend .chon_nganhang
+									}
+									.so_tai_khoan{
+										@extend .chon_nganhang
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.back_finish{
+			.button{
+				float: right;
+			    margin-bottom: 15px;
+			    font-size: 24px;
+    			line-height: 29px;
+    			button{
+    				border: none;
+    				background: white;
+    				cursor: pointer;
+    				&:hover{
+    					color: $primary_color;
+    				};
+    			}
+    			.back_step{
+    				color: #959595;
+    			}
+			}
+		}
+	}
+}
+/*cảm ơn*/
+.container{
+	.section-thank-you{
+		p{
+			color: #000000;
+			font-size: 18px;
+		}
+	}
+}
+@media (max-width: 475px){
+	.section-thank-you{
+		.img_account{
+			width: 100% !important;
+		}
+	}
+	.order-left{
+		box-shadow: none;
+		padding: 0px;
+		.oto, .xemay{
+    		.anh_vandon{
+    			height: 100% !important;
+    		}
+    	}
+		h1{
+			font-size: 24px;
+		}
+		.chon_dichvu{
+			padding: 0px;
+		}
+		.Khu-vuc{
+			.TP{
+				.related{
+					float: unset ;
+				}
+			}
+		}
+		.steps{
+			padding-top: 10px;
+		}
+		.loaiHH{
+			ul{
+				li{
+					margin:5px 4px;
+					min-width: 100px;
+				}
+			}
+		}
+		.KL{
+			li{
+				width: 80px;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+		}
+		.input_KL{
+			input{
+				width: 100%;
+			}
+		}
+		.choose{
+			margin-bottom: 5px;
+		}
+		.chon_KV{
+			ul{
+				li{
+					margin: 5px 2px;
+					padding: 0px 3px;
+				}
+			}
+			.delete{
+				.delete_KV{
+					display: none;
+				}
+				.icon_recycle{
+					display: block;
+				}
+			}
+		}
+		.tienthu{
+			p{
+				text-align: left;
+			}
+			.form_amount{
+				width: 100% !important;
+			}
+			margin-top: 10px;
+			padding: 0px !important;
+			input{
+				width: 100%
+			}
+		}
+		.next{
+			display: none !important;
+		}
+		.thoigian{
+			div{
+				margin: 5px 0px;
+				padding-left: 0px;
+			}
+		}
+		.input_phone, .input_name{
+			margin-left: 0px !important;
+			margin-right: 0px !important;
+		}
+	} 
+	.back_finish{
+		display: none;
+	}
+	.order-right{
+		padding-left: 0px;
+    	margin-top: 10px;
+    	padding-right: 0px;
+    	.thongtin{
+    		padding: 5px;
+    		.noigui{
+    			h1{
+    				font-size: 24px;
+    			}
+    		}
+    	}
+    	.dichvu_thanhtoan{
+    		height: unset !important;
+    	}
+    	.back_finish{
+    		.back_button{
+    			margin: 5px 0px;
+    			margin-top: 10px;
+    			padding: 0px !important;
+    		}
+    		.finish_button{
+    			margin: 5px 0px;
+    			margin-top: 5px;
+    			padding: 0px !important;
+    		}
+		}
+		.note_taodon{
+			.note{
+				textarea{
+					height: 76px;
+				}
+			}
+		}
+	}
+	.account_TK{
+		.img_TK{
+			padding: 0px;
+
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.thanh_toan_van_don{
+		.container{
+			width: 100%;
+		}
+	}
+	.button_next_mobile{
+		display: flex !important;
+		.information{
+			width: 50%;
+		    height: 51px;
+		    background: #55ACEE;
+		    font-weight: normal;
+		    font-size: 14px;
+		    line-height: 50px;
+		    text-align: center;
+		    color: #FFFFFF;
+		}
+		.back_step{
+			width: 25%;
+			height: 51px;
+			background: #979797;
+			span{
+				font-size: 35px;
+			    line-height: 50px;
+			}
+		}
+		.next_step{
+			width: 25%;
+			height: 51px;
+			background: #00428D;
+			font-size: 35px;
+			line-height: 55px;
+		}
+		.finish{
+			width: 75%;
+			height: 51px;
+			background: #00428D;
+			font-size: 18px;
+			line-height: 50px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+	}
+	.section-thank-you{
+		.content-left{
+			.account{
+				width: unset !important;
+				padding: 10px;
+			}
+		}
+	}
+}
+@media (min-width:990px) and (max-width: 1100px) {
+	.order-left{
+		.input_KL{
+			input{
+				width: 160px;
+			}
+		}
+		.tienthu{
+			.form_amount{
+				width: 200px;
+			}
+		}
+	}
+	.order-right{
+		.dichvu_thanhtoan{
+			.khuyenmai{
+				padding: 0px 5px;
+				input{
+					padding-left: 3px;
+    				padding-right: 3px;
+    				font-size: 13px;
+				}
+			}
+			.ma_khuyenmai{
+				padding: 0px 15px;
+				padding-bottom: 17px;
+			}
+		}
+	}
+}

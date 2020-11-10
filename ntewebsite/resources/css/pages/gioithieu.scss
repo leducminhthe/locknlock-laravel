@@ -1,0 +1,255 @@
+$color:#00428D;
+$yellow: yellow;
+
+.trangchu{
+	color: white;
+}
+.number{
+	margin-right: 5px;
+	width: 120px;
+    line-height: 14px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: 2px solid #666;
+}
+.wp-background{
+	background:url('../images/Frame27.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.wp-slide-child{
+	color: white;
+
+	.title{
+		font-size: 1rem;
+		padding-left: 30px;
+
+		h1{
+			border-left: 5px solid $yellow; 
+			padding: 0px 10px;
+		}
+	}
+}
+.gioithieu{
+	h1{
+	    font-size: 48px;
+	    font-weight: bold;
+	    margin-bottom: 20px;
+	    text-align: center;
+	}
+	.title_h1{
+		text-align: left;
+		margin-top: 15px;
+		color: #453F3F;
+	}
+
+	p{
+		max-height: 500px;
+    	overflow-y: auto;
+    	font-size: 18px;
+		line-height: 25px;
+		color: black;
+	}
+	.right{
+		padding-right: 80px;
+	}
+	#style-3::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		background-color: #F5F5F5;
+	}
+
+	#style-3::-webkit-scrollbar
+	{
+		width: 6px;
+		background-color: #F5F5F5;
+	}
+
+	#style-3::-webkit-scrollbar-thumb
+	{
+		background-color: #000000;
+	}
+}
+.info-ntl{
+	position: relative;
+
+	.sm-tn{
+		padding: 40px;
+		font-size: 18px;
+    	color: aliceblue;
+		position: absolute;
+		width: 670px;
+    	min-height: 445px;
+    	top: 45px;
+    	background: $color;
+
+    	ul{
+    		padding-left: 20px;
+
+    		li{
+    			list-style: disc;
+    		}
+    	}
+	}
+}
+
+.vandon{
+    background: #FDD800;
+    border-radius: 39px;
+    width: 213px;
+    height: 53px;
+    font-size: 24px;
+    line-height: 50px;
+    color: #000000;
+
+    a:hover{
+    	color: $color !important;
+    }
+}
+
+.collapsible {
+	border-top: 1px solid black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    background: white;  
+}
+.show_coll{
+	border-bottom: 1px solid black;
+    padding: 0px;
+    h1{
+    	margin-bottom: 40px;
+    }
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.dichvu{
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 525px;
+
+	.NT-giaohang{
+
+		position: absolute;
+	    top: 130px;
+	    color: aliceblue;
+
+	    h2{
+	    	font-size: 65px;
+	    }
+
+	    h1{
+	    	font-size: 72px;
+			line-height: 86px;
+	    }
+		
+	}
+}
+
+@media (max-width:414px){
+	.info-ntl{
+		.anh-gioithieu{
+			padding: 0px;
+			img{
+				width: 100%;
+			}
+		} 
+    	.sm-tn{
+    		padding: 25px;
+			position: relative;
+			width: 100%;
+			top:0px;
+
+			h2{
+				font-size: 22px;
+				font-weight: bold;
+				span{
+					font-size: 20px;
+    				font-weight: 100;
+				}
+			}
+			h3{
+				font-size: 22px;
+    			font-weight: bold;
+			}
+			
+			p, li{
+				font-size: 17px;
+			}
+		}
+	}
+	.dichvu{
+
+        height: 220px;
+
+		.NT-giaohang{
+			left: 20px;
+			top: 35px;
+
+			h2{
+				font-size: 25px;
+				line-height: 29px;
+			}
+
+			h1{
+				font-size: 30px;
+				line-height: 35px;
+			}
+
+			.vandon{
+				padding: 0px 15px;
+				width: 190px;
+				font-size: 25px;
+			}
+		}
+	}
+	.gioithieu{
+		.title_h1{
+			font-size: 24px;
+		}
+		.show_coll{
+			h1{
+				margin-bottom: 20px;
+			}
+		}
+		.right{
+			padding-right: 0px;
+		}
+		.img_icon{
+			width:40px;
+		}
+		h1{
+			font-size: 24px;
+		}
+		p{
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+}

@@ -1,0 +1,878 @@
+$primary_color: #00428D;
+$color_white: #FFFFFF;
+$color_black: black;
+$color_xam: #757575;
+$color_C4: #C4C4C4;
+
+::placeholder{
+	color: $color_xam;
+	padding-left:15px;
+};
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../../images/bg-7in.png");
+}
+
+.left_taodon{
+	padding-left: 50px;
+	.title_taodon{
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 57px;
+		color: $primary_color;
+	}
+	.service_id{
+		color: $primary_color;
+		height: 179.57px;
+		background: $color_white;
+		border: 1px solid #959595;
+		border-radius: 7px;
+		h1{
+			font-size: 36px;
+			padding-top: 15px;
+			font-weight: bold;
+		}
+		p{
+			font-size: 18px;
+		}
+		.img_dichvu{
+			display: flex;
+			align-items: center;
+			filter: grayscale(100%);
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.khoiluong{
+		.weight{
+			color: $primary_color;
+			height: 179.57px;
+			background: $color_white;
+			border-radius: 7px;
+			border: 1px solid #959595;
+			h1{
+				padding-top: 10px;
+				font-weight: 600;
+				font-size: 36px;
+				line-height: 43px;
+			}
+			h3{
+				font-size: 24px;
+				line-height: 29px;
+				span{
+					font-size: 30px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+.right_taodon{
+	padding-right: 30px;
+	.title_taodon{
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 57px;
+		color: $primary_color;
+	}
+	.input_tienthu{
+		width: 718px;
+		height: 108.68px;
+    	background: #2366B1;
+    	border-radius: 7px;
+    	#form_tienthu{
+    		padding: 0px 20px;
+    		.form_amount{
+    			display: flex;
+    			#amount{
+    				height: 74.99px;
+    				margin-top: 12px;
+    				background:$color_white;
+    				border-radius: 7px 0px 0px 7px;
+    				border-right: 0px;
+    				font-size: 24px;
+    				line-height: 29px;
+    				border: 1px solid $color_white;
+    				color: $color_black !important;
+    			}
+    			.currency{
+    				height: 74.99px;
+    				margin-top: 12px;
+    				background:$color_white;
+    				border-radius: 0 7px 7px 0;
+    				border-left: 0;
+    				font-size: 24px;
+    				line-height: 29px;
+    				padding: 20px 10px;
+    				span{
+			    		border-left: 1px solid $color_black;
+			    		padding: 0px 10px;
+			    	}
+    			}
+    		}
+    	}
+	}
+	.title_loaihanghoa{
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 57px;
+		color: $primary_color;
+		padding: 0px;
+	}
+	.loaiHH{
+		ul{
+			margin-top: 20px;
+
+			li{
+				float: left;
+			    height: 93.49px;
+    			background:$color_white;
+    			width: 226.99px;
+    			border-radius: 7px;
+			    cursor: pointer;
+				font-size: 24px;
+				line-height: 85px;
+				text-align: center;
+				color: $color_xam;
+				margin-right: 18px;
+				margin-bottom: 18px;
+				border: 1px solid $color_C4;
+			}
+		}
+	}
+	.khac{
+		input{
+			width: 716px;
+		    height: 74.99px;
+		    border: 1px solid $color_C4;
+		    border-radius: 7px;
+		    font-size: 36px;
+			line-height: 43px;
+		}
+	}
+	.s_time_POS{
+		.time_ship{
+			font-weight: bold;
+		    font-size: 36px;
+		    line-height: 43px;
+		    color: $primary_color;
+		}
+		.thoigian_POS{
+			padding-right: 17px;
+			label{
+				font-size: 22px;
+				line-height: 29px;
+				color: #000000;
+			}
+			.hours{
+				padding: 0px 5px;
+			}
+			.minute{
+				padding: 0px 3px;
+			}
+			select{
+				height: 79.6px;
+				background: #FFFFFF;
+				border: 1px solid #C4C4C4;
+				border-radius: 4px;
+				font-size: 24px;
+				line-height: 29px;
+				color: #757575;
+			}
+		}
+	}
+}
+
+/*back and next*/
+.button-footer {
+    .row {
+        .col-6 {
+            padding-right: 0;
+            padding-left: 0;
+            button {
+                height: 110px;
+                border: none;
+                font-size: 64px;
+                line-height: 76px;
+                position: relative;
+                img {
+                    left: 17%;
+                    top: 35px;
+                    position: absolute;
+                }
+                .img_next_button{
+                	left: 72%;
+                }
+            }
+            .btn-pre {
+            	width: 620px;
+                background: white;
+                color:  #2366B1;
+                padding-left: 20px;
+            }
+            .cancel{
+            	width: 335px;
+            	background: #FF4E43;
+            	color: $color_white;
+            }
+            .btn-next {
+                background: #2366B1;
+            }
+        }
+    }
+    .btn-pre{
+    	background: $color_white;
+    	color: $primary_color;
+        height: 110px;
+        border: none;
+        font-size: 64px;
+        line-height: 76px;
+        position: relative;
+        img {
+            left: 32%;
+            top: 35px;
+            position: absolute;
+        }
+    }
+}
+
+/*step_2*/
+.error{
+	font-size: 24px;
+    line-height: 29px;
+    color: red;
+	font-style: italic;
+}
+.title_taodon{
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 57px;
+	color: $primary_color;
+}
+.left_taodon_2{
+	padding-left: 30px;
+	.hoten_noigui{
+		input{
+			font-size: 36px;
+			line-height: 43px;
+			height: 79.6px;
+			background: $color_white;
+			border: 1px solid $color_C4;
+			width: 100%;
+			border-radius: 4px;
+			color: $color_black !important;
+			margin-bottom: 9px;
+		}
+	}
+	.s_phone{
+		@extend .hoten_noigui
+	}
+	.ghichu_noigui{
+		textarea{
+			font-size: 36px;
+			line-height: 43px;
+			height: 264px;
+			background: $color_white;
+			border: 1px solid $color_C4;
+			border-radius: 4px;
+			color: $color_black !important;
+			padding-top: 20px;
+		}
+	}
+}
+.hengio{
+	h1{
+		font-size: 36px;
+	    line-height: 43px;
+	    color: #000000;
+	    padding-left: 20px;
+	    margin: 12px 0px;
+	}
+	label{
+		font-size: 36px;
+	    line-height: 43px;
+	    color:$color_black;
+	    padding-top: 35px;
+		padding-right: 40px;
+	}
+	.ngay_giao_noigui{
+		width: 870px;
+	    height: 79.6px;
+	    background: #FFFFFF;
+	    border: 1px solid $color_C4;
+	    border-radius: 4px;
+	    margin-left: 15px;
+	    padding: 0px 10px;
+	    font-size: 36px;
+		line-height: 43px;
+		color: $color_xam;
+	}
+	.gio_giao_noigui{
+		height: 80px;
+		width: 70%;
+		background: #FFFFFF;
+		border: 1px solid $color_C4;
+		border-radius: 4px;
+		font-size: 36px;
+		line-height: 43px;
+		color: $color_xam;
+		padding: 0px 10px;
+	}
+	.phut_giao_noigui{
+		@extend .gio_giao_noigui
+	}
+}
+.right_taodon_2{
+	padding-right: 50px;
+	.khuvuc_noigui{
+		padding-left: 2px;
+		display: flex;
+		width: 871.13px;
+		height: 79.6px;
+		background: #FFFFFF;
+		border: 1px solid $color_C4;
+		border-radius: 4px;
+		font-size: 36px;
+    	line-height: 60px;
+		ul{
+			margin-top: 3px;
+			li{
+				float: left;
+			    min-width: 103px;
+			    padding: 10px 5px;
+			    text-align: center;
+			    background: #00428D;
+			    border-radius: 5px;
+			    color: #fff;
+			    height: 50px;
+			    line-height: 31px;
+			    font-size: 24px;
+			    margin: 10px 5px;
+			    span{
+			    	padding: 5px;
+			    }
+			}
+		}
+		p{
+			color: $color_xam;
+		}
+		.delete{
+			.delete_KV{
+				position: absolute;
+				right: 10px;
+				top: 9px;
+				cursor: pointer;
+				&:hover{
+					color: $primary_color;
+				}
+			}
+		}
+	}
+	.KV{
+		.TP{
+			li{
+				padding-top: 12px;
+				color: $color_xam;
+				float: left;
+			    margin-right: 10px;
+			    border-radius: 5px;
+			    background: $color_white;
+			   	width: 153.64px;
+				height: 62.27px;
+			    text-align: center;
+			    margin-bottom: 10px;
+			    cursor: pointer;
+			    font-size: 24px;
+			    line-height: 40px;
+			}
+		}
+	}
+	.KVK{
+		ul{
+			li{
+				float: left;
+			    width: 107px;
+				height: 20px;
+			    cursor: pointer;
+			    padding: 0px 35px;
+			    font-weight: 265;
+				font-size: 36px;
+				line-height: 43px;
+				margin-bottom: 40px;
+				margin-top: 20px;
+			}
+		}
+		h4 {
+		   	width: 100%; 
+		   	text-align: left; 
+		   	border-bottom: 1px solid #000; 
+		   	margin: 10px 0 20px; 
+		   	font-size: 36px;
+			line-height: 0.1em;
+		} 
+
+		h4 span { 
+		    background:#e8f2f3; 
+		    padding:0 20px;
+		    padding-left: 0px; 
+		}
+	}
+	.diachi{
+		input{
+			font-size: 36px;
+			line-height: 43px;
+			height: 79.6px;
+			background: $color_white;
+			border: 1px solid $color_C4;
+			width: 100%;
+			border-radius: 4px;
+			color: $color_black !important;
+		}
+	}
+	.ten-KV{
+		.province-by-alpha{
+			li{
+				float: left;
+			    min-width: 153.64px;
+			    height: 54px;
+			    color: $color_xam;
+			    font-size: 24px;
+			    line-height: 32px;
+			    margin-right: 15px;
+			    margin-bottom: 10px;
+			    border-radius: 4px;
+			    text-align: center;
+			    padding: 10px;
+			    background: $color_white;
+			    cursor: pointer;
+			}
+		}
+	}
+}
+
+/*Hoàn tat*/
+.left_taodon_HT{
+	padding-left: 50px;
+	.button_nguoigui{
+		button{
+			height: 109px;
+			width: 100%;
+			background:$primary_color;
+			font-size: 48px;
+		    line-height: 57px;
+		    color: $color_white;
+		    border: none;
+		}
+	}
+	.button_nguoinhan{
+		button{
+			width: 100%;
+			height: 109px;
+			background: $color_C4;
+			font-size: 48px;
+    		line-height: 57px;
+    		color: $color_white;
+    		border: none;
+		}
+	}
+	.thongtin{
+		height: 695px;
+		background: $color_white;
+		.hoten{
+			display: flex;
+			padding: 30px;
+			span{
+				font-size: 36px;
+				line-height: 43px;
+				color: $color_black;
+				padding: 2px 15px;
+			}
+		}
+		.sdt{
+			@extend .hoten
+		}
+		.diachi{
+			padding-bottom: 20px;
+    		padding-top: 20px;
+			@extend .hoten
+		}
+		.ghichu{
+			padding: 35px;
+			border-top: 1px solid #B6B6B6;
+			h1{
+				font-weight: 600;
+				font-size: 36px;
+				line-height: 43px;
+				color: $primary_color;
+			}
+			p{
+				font-size: 24px;
+				line-height: 29px;
+				color: $color_black;
+			}
+		}
+		.fix{
+			button{
+				font-size: 48px;
+				line-height: 57px;
+				text-align: center;
+				color:$color_white;
+				width: 435.5px;
+			    height: 107px;
+			    left: 240px;
+			    top: 570px;
+			    position: absolute;
+			    background: $primary_color;
+			    border: none;
+			}
+		}
+	}
+}
+.right_taodon_HT{
+	padding-right: 50px;
+	.thongtin{
+		border-radius: unset;
+		box-shadow: none;
+		.dichvu_KL{
+			display: flex;
+			img{
+				width: 190px;
+				height: 165px;
+			}
+			.ten_dichvu_KL{
+				padding: 25px;
+				font-weight: bold;
+				h1{
+					font-size: 48px;
+					line-height: 57px;
+					color: $primary_color;
+				}
+				p{
+					font-size: 36px;
+					line-height: 43px;
+					color: $primary_color;
+				}
+			}
+		}
+		.fix_thongtin{
+			button{
+				width: 238.18px;
+				height: 107px;
+				background: $primary_color;
+				position: absolute;
+			    left: 106px;
+			    top: 30px;
+			    font-size: 48px;
+				line-height: 57px;
+				text-align: center;
+				color: $color_white;
+				border: none;
+			}
+		}
+		.QR{
+			width: 241px;
+		    height: 245px;
+		    margin: 20px 35px;
+		}
+		.thongtin_vandon{
+			width: 555px;
+			h1{
+				font-size: 64px;
+				line-height: 76px;
+				color:$primary_color;
+				margin-bottom: 20px;
+				font-weight: bold;
+			}
+			table{
+				tbody{
+					td{
+						font-size: 36px;
+					    line-height: 30px;
+					    color: $color_xam;
+					    padding-bottom: 39px;
+					    span{
+					    	font-weight: 600;
+					    	color: $color_black;
+					    }
+					}
+					.carol_content{
+						max-width: 100px;
+					    overflow: hidden;
+					    text-overflow: ellipsis;
+					    white-space: nowrap;
+					}
+					td:last-child{
+						text-align: end;
+						color: $color_black;
+					}
+				}
+			}
+		}
+		.chiphi_tienthu{
+			padding-top: 35px;
+    		border-top: 1px solid #B6B6B6;
+			table{
+				tbody{
+					td{
+						font-size: 36px;
+					    line-height: 20px;
+					    color: $color_xam;
+					    padding-bottom: 35px;
+					    padding-left: 20px;
+					    span{
+					    	font-weight: bold;
+							font-size: 48px;
+							line-height: 20px;
+					    }
+					}
+					td:last-child{
+						text-align: end;
+						color: $color_black;
+						padding-right: 15px;
+					}
+				}	
+			}
+		}
+	}
+	.khuyenmai_vandon{
+	    width: 895px;
+	    height: 138px;
+	    background: $primary_color;
+	    margin-top: 25px;
+	    display: flex;
+	    .img_khuyenmai{
+	    	img{
+		    	width: 83px;
+			    height: 93px;
+			    margin: 22px 25px;
+			}
+	    }
+		.input_khuyenmai{
+			input{
+				width: 710px;
+			    height: 79.6px;
+			    left: 1126px;
+			    top: 793px;
+			    background: #FFFFFF;
+			    margin: 30px 0px;
+			    font-size: 36px;
+			    line-height: 43px;
+			    border-radius: 5px;
+			    border: 1px solid $color_C4;
+			}
+		}
+	}
+}
+
+/*thanh toán*/
+.left_thanhtoan{
+	padding-left: 50px;
+	.thanhtoan_tructiep{
+		display: flex;
+	    align-items: center;
+	    padding: 0px 80px;
+		background: $primary_color;
+		height: 361px;
+		border: 1px solid #959595;
+		border-radius: 7px;
+		.img_thanhtoan_tructiep{
+			width: 186px;
+    		height: 186px;
+		}
+		.title_tructiep{
+			h1{
+				font-size: 64px;
+				line-height: 76px;
+				color: #FFFFFF;
+				width: 440px;
+    			font-weight: bold;
+    			margin-bottom: 15px;
+			}
+			p{
+				font-size: 24px;
+				line-height: 29px;
+				color: #FFFFFF;
+			}
+		}
+	}
+	.momo{
+		background: #AE2070;
+	}
+}
+.right_thanhtoan{
+	padding-right: 50px;
+	.chuyenkhoan{
+		display: flex;
+	    align-items: center;
+	    padding: 0px 80px;
+		background: #0280C7;
+		height: 361px;
+		border: 1px solid #959595;
+		border-radius: 7px;
+		.img_thanhtoan_tructiep{
+			width: 186px;
+    		height: 186px;
+		}
+		.title_tructiep{
+			h1{
+				font-size: 64px;
+				line-height: 76px;
+				color: #FFFFFF;
+				width: 440px;
+    			font-weight: bold;
+    			margin-bottom: 15px;
+			}
+			p{
+				font-size: 24px;
+				line-height: 29px;
+				color: $color_white;
+			}
+		}
+	}
+	.zalopay{
+		background: $color_white;
+		h1,p{
+			color: $primary_color !important;
+		}
+	}
+}
+
+/*thanh toán thẻ ngân hàng*/
+.all_div{
+	.img_nganhang{
+		img{
+			position: absolute;
+		    left: 170px;
+		    top: 14px;
+		    height: 800px;
+		}
+	}
+}
+/*nhập thẻ*/
+.all_div{
+	.thong_tin{
+		display: flex;
+	    position: absolute;
+	    left: 861px;
+	    background: white;
+	    .servied_weight{
+	    	margin: 10px;
+	    	margin-right: 50px;
+	    	ul{
+	    		display: flex;
+	    		li{
+		    		img{
+		    			width: 101px;
+						height: 101px;
+						margin-right: 20px;
+		    		}
+		    		h1{
+		    			font-weight: bold;
+						font-size: 48px;
+						line-height: 57px;
+						color: $primary_color;
+		    		}
+		    		p{
+		    			font-weight: bold;
+						font-size: 36px;
+						line-height: 43px;
+						color: $primary_color;
+		    		}
+		    		&:last-child{
+		    			border-right: 1px solid $primary_color;
+		    			padding-right: 100px;
+		    		};
+		    	}
+	    	}
+	    }
+	    .amount{
+	    	margin: 10px;
+	    	margin-right: 100px;
+	    	p{
+	    		font-weight: normal;
+				font-size: 36px;
+				line-height: 60px;
+				color: #757575;
+	    	}
+	    	h1{
+	    		font-size: 36px;
+				font-weight: normal;
+				span{
+					font-weight: bold;
+					font-size: 48px;
+					line-height: 20px;
+					color: #000000;
+				}
+	    	}
+	    }
+	}
+	.title{
+		h1{
+			position: absolute;
+			width: 594px;
+			height: 129px;
+			left: 200px;
+			top: 100px;
+
+			font-family: San Francisco Display;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 64px;
+			line-height: 76px;
+			color: $primary_color;
+		}
+	}
+	.phone_user{
+		display: flex;
+		position: absolute;
+		width: 1532px;
+		height: 124.6px;
+		left: 193px;
+		top: 212px;
+		background: #FFFFFF;
+		border: 1px solid #C4C4C4;
+		box-sizing: border-box;
+		border-radius: 4px;
+		.nganhang{
+		    height: 90px;
+		    padding: 15px;
+		    img{
+		    	border-right: 1px solid $primary_color;
+    			padding-right: 10px;
+		    }
+		}
+		.input_sdt{
+			width: 100%;
+			padding: 10px;
+			input{
+				width: 100%;
+			    height: 100%;
+			    border: none !important;
+			    font-weight: normal;
+				font-size: 48px;
+				line-height: 57px;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				color: #757575;
+			}
+		}
+	}
+	.thongbao{
+		position: absolute;
+		width: 928px;
+		height: 66px;
+		left: 193px;
+		top: 337px;
+		font-family: San Francisco Display;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 29px;
+		display: flex;
+		align-items: center;
+		color: #00428D;
+	}
+}

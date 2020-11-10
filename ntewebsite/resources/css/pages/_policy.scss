@@ -1,0 +1,31 @@
+.section-policy{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+        .policy-item{
+            text-align: center;
+            background: $white;
+            margin: 1rem;
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.15);
+            width:369px;
+          
+            .img-fluid{
+                height: 350px;
+            }
+            .btn{
+                width:250px;
+                margin-bottom: 2rem;
+                height: 40px;
+            }
+            a{    
+                p{
+                    font-size: 18px;   
+                }
+            }
+            
+        }
+    
+    }
+}

@@ -1,0 +1,86 @@
+$font-san-francisco-display : "San Francisco Display";
+$white : white;
+$black : black;
+$yellow : #FCD804;
+$gray : #9A9A9A;
+$bg-color : #758E3D;
+@import "../layout/variables";
+.breadcrumb-banner {
+    padding-top: 5px !important;
+}
+.section-account{
+    font-family: $font-san-francisco-display;
+    .container{
+        height: 100%;
+        align-content: center;
+    }
+    .card-change-pass {
+        width: 569px;
+    }
+    .card-info{
+        width: 569px;
+        height: 428px;
+    }
+    .card-info, .card-change-pass{
+        display: block;
+        margin-top: 4%;
+        margin-bottom: auto;
+        padding: 20px;
+        box-shadow: 4px 4px 7px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 7px;
+
+        input{
+            border-top-left-radius: 5px !important;
+            border-bottom-left-radius: 5px !important;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+        }
+        .remember {
+            margin-left: 45px;
+            input[type='radio']:checked:after {
+                width: 15px;
+                height: 15px;
+                border-radius: 15px;
+                top: -2px;
+                left: -1px;
+                position: relative;
+                background-color: #ffa500;
+                content: '';
+                display: inline-block;
+                visibility: visible;
+                border: 2px solid white;
+            }
+        }
+
+        .phone {
+            margin: 0 auto;
+        }
+        .input-number {
+            height: 40px;
+            border-radius: 5px;
+            width: 38.05px;
+            margin-left: -13px;
+        }
+        input:focus{
+            box-shadow: 0 0 0 0 !important;
+            border: 1px solid $primary_color;
+        }
+        .title-form, .title-check {
+            color: $black;
+            line-height: 14px;
+        }
+        .save_btn, .btn-change-pass{
+            color: black;
+            background-color: $yellow;
+            width: 190.44px;
+            height: 38px;
+        }
+        .save_btn:hover{
+            color: black;
+            background-color: $white;
+            border: 1px solid $primary_color;
+        }
+    }
+}

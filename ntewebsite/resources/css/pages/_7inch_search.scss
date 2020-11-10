@@ -1,0 +1,64 @@
+@import "../layout/variables";
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/bg-7in.png");
+    .container {
+        max-width: 1920px !important;
+        padding-left: 200px !important;
+        padding-right: 200px !important;
+    }
+    .query-search {
+        height: 450px;
+        padding-top: 70px;
+        .query-search-title {
+            font-size: 64px;
+            line-height: 76px;
+            color: #00428D;
+        }
+        #q {
+            height: 124.6px;
+            font-size: 48px;
+            line-height: 57px;
+        }
+        p {
+            font-size: 24px;
+            line-height: 29px;
+            span {
+                color: $primary_color;
+            }
+        }
+    }
+    .button-footer {
+        .row {
+            .col-6 {
+                padding-right: 0;
+                padding-left: 0;
+                button {
+                    height: 110px;
+                    border: none;
+                    font-size: 64px;
+                    line-height: 76px;
+                    position: relative;
+                    img {
+                        left: 17%;
+                        top: 35px;
+                        position: absolute;
+                    }
+                }
+                .btn-pre {
+                    background: white;
+                    color:  #2366B1;
+                }
+                .btn-next {
+                    background: #2366B1;
+                }
+            }
+        }
+
+    }
+    .keyboard {
+        padding: 14px;
+        background: linear-gradient(0deg, #3A9BD6, #3A9BD6), rgba(255, 255, 255, 0.4);
+    }
+}

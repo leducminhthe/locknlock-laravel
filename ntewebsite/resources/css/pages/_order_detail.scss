@@ -1,0 +1,203 @@
+@import "../layout/variables";
+body {
+    background: #E5E5E5;
+    margin: 0;
+    padding: 0;
+    .id-order {
+        font-weight: 800 !important;
+    }
+    .about-order-detail {
+        background: #FFFFFF;
+        box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 7px;
+        font-size: 13px;
+        .fees {
+            height: 100px;
+        }
+        .color-gray {
+            color:  #AAAAAA;
+        }
+        .about-right {
+            font-size: 15px;
+            letter-spacing: -0.02em
+        }
+    }
+    .done {
+        background-color: $primary_color;
+    }
+    .border-done {
+        border: 1px solid $primary_color;
+    }
+    .content-order-detail {
+        .content-left {
+            padding-top: 20px;
+            padding-bottom: 40px;
+            font-size: 14px !important;
+            width: 42%;
+            background: #FFFFFF;
+            box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+            border-radius: 7px;
+            .name-product {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+        .content-right {
+            padding-bottom: 20px;
+            width: 57%;
+            background: $white;
+            box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 7px;
+            font-size: 13px;
+            .status-order {
+                .row-circle {
+                    padding-left: 110px !important;
+                }
+                .step-now {
+                    padding-left: 65px !important;
+                }
+                .center-line {
+                    padding-right: 0 !important;
+                    padding-left: 0 !important;
+                    margin-right: 10px;
+                }
+                .col-1 {
+                    .circle {
+                        text-align: center;
+                        width: 32.57px !important;
+                        line-height: 32.57px;
+                        height: 32.57px;
+                    }
+                    .circle:nth-child(1) {
+                        float: right;
+                    }
+                }
+                p {
+                    margin-bottom: 5px;
+                }
+                .content-title {
+                    background: #F6F6F7;
+                    border: 1px solid #C4C4C4;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    height: 180px;
+                    overflow: auto;
+                }
+                .status-now:nth-child(1) {
+                    padding-left: 30px !important;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1043px) {
+    body {
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            h1.mt-4.mb-4 {
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+            }
+            span.font-size-24.font-weight-bold {
+                font-size: 18px;
+                line-height: 20px;
+            }
+
+            .about-order-detail {
+                border-radius: 0 !important;
+                .img-code {
+                    margin-top: 10px;
+                    width: auto;
+                }
+                .fees {
+                    float: left;
+                    width: auto;
+                    span.bg-info.text-white.pl-1 {
+                        display: none;
+                    }
+                }
+                .about-right {
+                    font-size: 12px;
+                    letter-spacing: -0.02em
+                }
+            }
+
+            .content-order-detail {
+                font-size: 12px !important;
+                .content-left {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    margin-right: 0 !important;
+                    border-radius: 0 !important;
+                    .name-product {
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+                .content-right {
+                    width: 100%;
+                    border-radius: 0 !important;
+                    .status-order {
+                        padding-left: 10px !important;
+                        p:first-child {
+                            padding-left: 0 !important;
+                        }
+                        .step-now {
+                            padding-left: 0 !important;
+                        }
+                        .status-now:nth-child(1) {
+                            padding-left: 20px !important;
+                        }
+                        .status-now:nth-child(3) {
+                            padding-left: 25px !important;
+                        }
+                        .table-history {
+                            padding-left: 0 !important;
+                        }
+                        .row-circle {
+                            padding-left: 40px !important;
+                            .col-1 {
+                                padding-right: 0;
+                                padding-left: 0;
+                            }
+                            .circle-tow {
+                                margin-left: 10px;
+                            }
+                            .circle-three {
+                                margin-left: 10px;
+                            }
+                            .center-line {
+                                margin-right: 0;
+                            }
+                        }
+                        hr {
+                            margin-left: 10px;
+                            width: 77px;
+                        }
+                        .status-now {
+                            padding-left: 6px;
+                            p {
+                                padding-left: 5px;
+                            }
+                        }
+                        .step-now:nth-child(1) {
+                            padding-left: 20px !important;
+                        }
+                        .status-now:nth-child(3) {
+                           margin-left: 0 !important;
+                        }
+                        .content-title {
+                            margin-left: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

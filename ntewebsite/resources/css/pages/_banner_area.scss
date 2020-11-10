@@ -1,0 +1,36 @@
+@import "../layout/variables";
+$font-san-francisco-display : "San Francisco Display";
+.section-banner-area {
+    height: 128px;
+    line-height: 128px;
+    font-family: $font-san-francisco-display;
+    background: $gradient_color, url("../images/Frame 23.jpg");
+    background-size: 100% 100%;
+    .container {
+        padding-top: 30px;
+    }
+    .breadcrumb-banner {
+        padding-top: 21px;
+        height: 62px;
+        border-left: 5px solid #FDD800;
+        a:first-child {
+            padding-left: 15px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .section-banner-area {
+        height: 48px;
+        .container {
+            padding-top: 0;
+            padding-left: 0;
+        }
+    }
+    .breadcrumb-banner {
+        height: 48px !important;
+        padding-top: 10px !important;
+        a {
+            font-size: 13px !important;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+@import "../layout/variables";
+
+.section-otp{
+    background: linear-gradient(0deg, rgba(47, 48, 47, 0.56), rgba(47, 48, 47, 0.56)), url('../images/Frame 28.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    padding-bottom: 90px;
+
+    .container{
+        height: 100%;
+        align-content: center;
+        .title-header {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 57px;
+        }
+    }
+    .card{
+        display: block;
+        height: 377px;
+        margin-top: 4%;
+        margin-bottom: auto;
+        padding: 10px;
+        width: 320px;
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+        border-radius: 7px;
+
+        input {
+            //border-radius: 5px;
+            //box-sizing: border-box;
+        }
+        .phone {
+            margin: 0 auto;
+            font-size: 16px;
+            font-weight: bold;
+            color: $primary_color;
+        }
+        .input-number {
+            height: 40px;
+            border-radius: 7px;
+            width: 38.05px;
+            margin-left: -13px;
+            border: 1px solid #959595 !important;
+        }
+        input:focus{
+            box-shadow: 0 0 0 0 !important;
+            border: 1px solid $primary_color;
+        }
+        .title-form, .title-check {
+            color: $black;
+            line-height: 14px;
+        }
+        .title-form {
+            font-size: 12px;
+        }
+        .title-check {
+            font-size: 16px;
+        }
+        .otp-return {
+            font-size: 16px;
+            font-family: Roboto;
+            color: $gray;;
+        }
+        .submit_otp_btn{
+            height: 41px;
+            font-size: 16px;
+            line-height: 30px;
+            color: black;
+            background-color: $yellow;
+            width: 100%;
+        }
+        .submit_otp_btn:hover {
+            background: white;
+            border: 1px solid $primary_color;
+        }
+        .register_btn:hover{
+            color: black;
+            background-color: $white;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-otp {
+        background: #E5E5E5;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin-top: 0 !important;
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            .title-header {
+                color: $black !important;
+            }
+            .card-otp {
+                width: 100%;
+                margin-top: 0 !important;
+                border-radius: 0 !important;
+                #show_hide_password {
+                    .input-group-addon {
+                        img {
+                            left: 92%;
+                        }
+                    }
+                }
+                .show_hide_password {
+                    .input-group-addon {
+                        img {
+                            left: 92%;
+                        }
+                    }
+                }
+                .align-items-center {
+                    .title-form {
+                        margin-left: 0 !important;
+                    }
+                }
+                .form-group:nth-child(3){
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

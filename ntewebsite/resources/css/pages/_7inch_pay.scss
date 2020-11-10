@@ -1,0 +1,64 @@
+@import "../layout/variables";
+body {
+    margin: 0;
+    padding: 0;
+    .section-pay {
+        background-image: url("../images/bg-7in.png");
+        padding-bottom: 50px;
+        padding-top: 76px;
+        .justify-content-center {
+            font-size: 64px;
+            font-weight: 800px;
+            line-height: 76px;
+            letter-spacing: 0.0357143em;
+
+            color: #00428D;
+            .small-text {
+                font-size: 36px;
+                line-height: 43px;
+                font-weight: normal;
+            }
+            img {
+                width: 917px;
+                height: 690px;
+                margin-top: -4%;
+            }
+            .cannot-pay {
+                margin-top: 0;
+            }
+        }
+        .button-footer {
+            .row {
+                .col-6, .col-12 {
+                    padding-right: 0;
+                    padding-left: 0;
+                    button {
+                        height: 110px;
+                        border: none;
+                        font-size: 64px;
+                        line-height: 76px;
+                        position: relative;
+                        img {
+                            left: 17%;
+                            top: 35px;
+                            position: absolute;
+                        }
+                        .cannot-icon-pay {
+                            position: absolute;
+                            top: 20px !important;
+                        }
+                    }
+                    .btn-pre {
+                        background: white;
+                        color:  #2366B1;
+                    }
+                    .btn-next {
+                        background: #2366B1;
+                    }
+                }
+            }
+
+        }
+    }
+}
+

@@ -1,0 +1,185 @@
+@import "../layout/variables";
+body {
+    margin: 0;
+    padding: 0;
+    .done {
+        background-color: $primary_color;
+    }
+    .border {
+        border: 1px solid $primary_color;
+    }
+    .result-order {
+        background-image: url("../images/bg-7in.png");
+        padding-bottom: 12.5%;
+        .container {
+            padding-right: 74px !important;
+            padding-left: 74px !important;
+            max-width: 1920px !important;
+            h1 {
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 57px;
+                color: #00428D;
+            }
+            .result-order-header {
+                height: 220px;
+                background-color: white;
+                border-radius: 7px;
+                .header-left {
+                    height: 100%;
+                    float: left;
+                    width: 45%;
+                    .QR-CODE {
+                        width: 30%;
+                        float: left;
+                        padding-left: 17px;
+                        padding-top: 17px;
+                        padding-bottom: 17px;
+                        img {
+                            width: 187px;
+                            height: 185px;
+                        }
+                    }
+                    .info-service {
+                        width: 60%;
+                        float: left;
+                        font-size: 24px;
+                        line-height: 20px;
+                        .money {
+                            font-size: 36px;
+                        }
+                    }
+                }
+                .header-right {
+                    height: 100%;
+                    float: left;
+                    width: 55%;
+                    font-size: 24px;
+                    line-height: 45px;
+                    align-items: center;
+                    letter-spacing: -0.02em;
+                    img {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+
+            .result-order-content {
+                .content-left {
+                    padding-top: 20px;
+                    padding-bottom: 40px;
+                    font-size: 24px !important;
+                    height: 582px;
+                    line-height: 50px;
+                    width: 40%;
+                    background: #FFFFFF;
+                    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+                    margin-right: 10px;
+                    border-radius: 7px;
+                    .name-product {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    .address-to {
+                        padding-bottom: 50px !important;
+                    }
+                }
+                .content-right {
+                    padding-bottom: 20px;
+                    width: 59.4%;
+                    background: $white;
+                    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+                    border-radius: 7px;
+                    font-size: 24px;
+                    line-height: 29px;
+                    .status-order {
+                        padding-top: 40px !important;
+                        padding-bottom: 52px !important;
+                        .title-statius {
+                            font-size: 36px;
+                            line-height: 43px;
+                        }
+                        .row-circle {
+                            padding-left: 110px !important;
+                        }
+                        .step-now {
+                            padding-left: 65px !important;
+                            margin-bottom: 50px !important;
+                        }
+                        .center-line {
+                            padding-right: 0 !important;
+                            padding-left: 0 !important;
+                            margin-right: 10px;
+                        }
+                        .col-1 {
+                            .circle {
+                                text-align: center;
+                                width: 32.57px !important;
+                                line-height: 32.57px;
+                                height: 32.57px;
+                            }
+                            .circle:nth-child(1) {
+                                float: right;
+                            }
+                        }
+                        p {
+                            margin-bottom: 5px;
+                        }
+                        .content-title {
+                            background: #F6F6F7;
+                            border: 1px solid #C4C4C4;
+                            box-sizing: border-box;
+                            border-radius: 4px;
+                            height: 260px;
+                            overflow: auto;
+                        }
+                        .status-now:nth-child(1) {
+                            padding-left: 30px !important;
+                        }
+                    }
+                }
+            }
+
+            .button-footer {
+                .row {
+                    .col-6 {
+                        padding-right: 0;
+                        padding-left: 0;
+                        button {
+                            height: 110px;
+                            border: none;
+                            font-size: 64px;
+                            line-height: 76px;
+                            position: relative;
+                            img {
+                                left: 17%;
+                                top: 35px;
+                                position: absolute;
+                            }
+                        }
+                        .btn-pre {
+                            background: #2366B1;
+                            width: 33%;
+                        }
+                        .number-page {
+                            width: 33%;
+                            margin-left: -1px;
+                        }
+                        .btn-next {
+                            background: #2366B1;
+                            width: 33.49%;
+                            margin-left: -1px;
+                        }
+                        .btn-home {
+                            background: #3A9BD6;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+

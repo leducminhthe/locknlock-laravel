@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+@import "../layout/variables";
+.section-register {
+    height: 762px;
+}
+
+.section-login{
+    background:  linear-gradient(0deg, rgba(47, 48, 47, 0.56), rgba(47, 48, 47, 0.56)), url('../images/Frame 28.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    padding-bottom: 90px;
+
+    .container{
+        height: 100%;
+        align-content: center;
+
+        .title-login {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 57px;
+        }
+    }
+    .card{
+        display: block;
+        margin-top: 4%;
+        margin-bottom: auto;
+        width: 297px;
+        background-color: $white;
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+        border-radius: 7px;
+        padding: 20px;
+
+        #show_hide_password {
+            #password-field {
+                background-image: none !important;
+            }
+            .input-group-addon {
+                height: 38px !important;
+                img {
+                    width: 20px !important;
+                    position: absolute;
+                    left: 230px;
+                    top: 10px;
+                    z-index: 999;
+                }
+            }
+        }
+        .container-forgot {
+            .col-12 {
+                padding-right: 0 !important;
+            }
+        }
+        input {
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 12px;
+            height: 41px;
+            color: black !important;
+        }
+        input:focus{
+            box-shadow: 0 0 0 0 !important;
+            border: 1px solid $primary_color;
+        }
+        .forgot-pass {
+            color: $black;
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .account-exit {
+            font-size: 14px;
+        }
+        .account-exit {
+            margin: 0 auto;
+        }
+        .login_btn, .create_btn {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        .login_btn{
+            color: black;
+            background-color: $yellow;
+            width: 100%;
+            height: 41px;
+        }
+        .create_btn{
+            background-color: $primary_color;
+            color: $white !important;
+            width: 100%;
+            height: 41px;
+        }
+        .create_btn:hover {
+            background-color: $white;
+            color: $black !important;
+            border: 1px solid $primary_color;
+        }
+        .login_btn:hover{
+            background-color: $white;
+            color: $black !important;
+            border: 1px solid $primary_color;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .section-login {
+        background: #E5E5E5;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            .title-login {
+                color: $black !important;
+            }
+            .card-login {
+                width: 100%;
+                margin-top: 0 !important;
+                border-radius: 0 !important;
+
+                #show_hide_password {
+                    .input-group-addon {
+                        img {
+                            left: 92%;
+                        }
+                    }
+                }
+
+                .align-items-right {
+                    .forgot-pass {
+                        margin-left: 65%;
+                    }
+
+                }
+                .align-items-center {
+                    .account-exit {
+                        margin: 0;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

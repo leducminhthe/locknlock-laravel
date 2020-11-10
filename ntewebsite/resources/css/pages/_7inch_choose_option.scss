@@ -1,0 +1,89 @@
+@import "../layout/variables";
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 1920px !important;
+    header {
+        .header {
+            background-color: $primary_color;
+            height: 145px;
+            line-height: 145px;
+        }
+    }
+    .choose-option {
+        background-image: url("../images/bg-7in.png");
+        padding-top: 101px;
+        height: 1080px;
+        .option {
+            border-radius: 15px;
+            position: relative;
+            height: 469px;
+            img {
+                position: absolute;
+                width: 570px;
+                height: 387px;
+                left: 42%;
+                top: -26%;
+            }
+
+            .img-moto {
+                width: 385px;
+                height: 385px;
+                left: 52%;
+                top: -22%;
+            }
+            .img-oto {
+                width: 415px;
+                height: 415px;
+                left: 47%;
+                top: -23%;
+            }
+            .option-title {
+                position: absolute;
+                top: 39%;
+                left: 4%;
+                width: 712px;
+                h1 {
+                    font-weight: bold;
+                    font-size: 64px;
+                    line-height: 76px;
+                }
+                p {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+            }
+            .option-create {
+                top: 30% !important;
+                .right-p {
+                    font-size: 24px;
+                    width: 610px;
+                    line-height: 29px;
+                }
+            }
+        }
+        .option-left {
+            background-color: $primary_color;
+        }
+        .option-right {
+            background-color: #0280C7;
+            img {
+                left: 39%;
+                top: -20%;
+            }
+            .option-title {
+                top: 16%;
+                h1 {
+                   width: 310px;
+                }
+                p {
+                    font-size: 24px;
+                    width: 456.54px;
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+
+}
