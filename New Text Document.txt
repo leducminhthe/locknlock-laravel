@@ -1,9 +1,3 @@
-live:ed71336ef3744e34
-
-theldm@ntlogistics.vn/The@123 (theldm@ntlogistics.vn/The@123)
-http://mail.ntlogistics.vn/
-ntlogistics-it.slack.com
-
 // domen gia 
 
 vao D:\New folder\apache\conf\extra\httpd-vhosts.conf them 
@@ -49,17 +43,22 @@ them {
     }
 dung npm install sau dung gulp
 
-Env file:
-
-APP_URL=http://localhost:8000
-FACEBOOK_LOGIN_URL=/en/portal/facebook_login
-FACEBOOK_CALLBACK_URL=/en/portal/facebook_callback
-in Laravel:
-
-env('APP_URL') . env('FACEBOOK_LOGIN_URL');
-
 //cac buoc
 process steps css
 
 //ismobile
 composer dump-autoload
+
+//creat api with laravel 
+Controller: return response()->json('name_model'::get(), 200)
+
+//make middleware token_authencation api
+php artisan make:middleware AuthKey : this will create in HTTP/Middleware/AuthKey
+in AuthKey:
+$token = $request->header('auth');
+        if ($token != 'ABCDEF') {
+            return response()->json(['message'=>'App key not found'], 401);
+        }
+        return $next($request);
+in Kernel much add on protected $middlewareGroups -> api:
+\App\Http\Middleware\AuthKey::class,
